@@ -1,11 +1,11 @@
 {
   "repo": {
-    "timestamp": 1784068012000,
+    "timestamp": 1784069093000,
     "version": 20002,
     "name": "hrbons apps",
     "icon": "fdroid-icon.png",
-    "address": "https://EDIT-ME.github.io/fdroid/repo",
-    "description": "Personal F-Droid repository for hrbons apps. Add this repo in the F-Droid client to get updates."
+    "address": "https://abons.github.io/wordguesser/fdroid/repo",
+    "description": "Personal F-Droid repository for hrbons apps."
   },
   "requests": { "install": [], "uninstall": [] },
   "apps": [
@@ -13,11 +13,11 @@
       "packageName": "com.hrbons.wordguesser",
       "name": "Word Guesser",
       "summary": "Tiny native Wordle-style word game",
-      "description": "A tiny, native Android word-guessing game (Wordle-style) in pure Kotlin. Multi-language downloadable word lists, variable word length (4-8), strict/hard modes, daily puzzles per length with a public leaderboard, and word lookup via the on-device Gemini app.",
+      "description": "A tiny, native Android word-guessing game (Wordle-style) in pure Kotlin.",
       "license": "Proprietary",
       "categories": ["Games"],
-      "added": 1784068012000,
-      "lastUpdated": 1784068012000,
+      "added": 1784069093000,
+      "lastUpdated": 1784069093000,
       "suggestedVersionName": "1.0",
       "suggestedVersionCode": "1"
     }
@@ -37,7 +37,7 @@
         "sig": "066a8bfbdea56d46c224f114a002091d",
         "signer": "f6787964f8e619e59185360034df1ad16de88e13f94a61539e348761cf0e7d63",
         "uses-permission": [ ["android.permission.INTERNET", null] ],
-        "added": 1784068012000
+        "added": 1784069093000
       }
     ]
   }

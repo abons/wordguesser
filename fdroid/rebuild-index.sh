@@ -64,7 +64,7 @@ cat > "$REPO/index-v1.json" <<JSON
     "version": 20002,
     "name": "hrbons apps",
     "icon": "fdroid-icon.png",
-    "address": "https://EDIT-ME.github.io/fdroid/repo",
+    "address": "https://abons.github.io/wordguesser/fdroid/repo",
     "description": "Personal F-Droid repository for hrbons apps."
   },
   "requests": { "install": [], "uninstall": [] },
