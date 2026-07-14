@@ -3,7 +3,43 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Word Guesser — download</title>
+<title>Word Guesser — tiny native Wordle-style word game for Android</title>
+<meta name="description" content="Download Word Guesser: a tiny (~72 KB), native, ad-free Wordle-style word game for Android. Many languages, variable word length, daily puzzles, leaderboard. Get it directly or via F-Droid.">
+<meta name="keywords" content="Word Guesser, Wordle, Android word game, F-Droid, open source, ad-free, Nederlands, woordspel, native, lightweight APK">
+<meta name="author" content="hrbons">
+<meta name="theme-color" content="#16a34a">
+<link rel="canonical" href="https://abons.github.io/wordguesser/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2316a34a'/%3E%3Ctext x='50' y='73' font-size='62' font-family='sans-serif' font-weight='bold' fill='white' text-anchor='middle'%3EW%3C/text%3E%3C/svg%3E">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Word Guesser">
+<meta property="og:title" content="Word Guesser — tiny native Wordle-style word game for Android">
+<meta property="og:description" content="A tiny (~72 KB), native, ad-free Wordle-style word game. Many languages, daily puzzles, leaderboard. Direct download or via F-Droid.">
+<meta property="og:url" content="https://abons.github.io/wordguesser/">
+<meta property="og:image" content="https://abons.github.io/wordguesser/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Word Guesser — tiny native Wordle-style word game for Android">
+<meta name="twitter:description" content="A tiny (~72 KB), native, ad-free Wordle-style word game. Many languages, daily puzzles. Direct download or via F-Droid.">
+<meta name="twitter:image" content="https://abons.github.io/wordguesser/assets/og.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "Word Guesser",
+  "operatingSystem": "Android 5.0+",
+  "applicationCategory": "GameApplication",
+  "description": "A tiny, native Wordle-style word game for Android in pure Kotlin. Many downloadable languages, variable word length, strict/hard modes, daily puzzles per length with a public leaderboard.",
+  "url": "https://abons.github.io/wordguesser/",
+  "downloadUrl": "https://abons.github.io/wordguesser/fdroid/repo/com.hrbons.wordguesser_1.apk",
+  "softwareVersion": "1.0",
+  "fileSize": "72KB",
+  "author": { "@type": "Person", "name": "hrbons" },
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
 <style>
   :root { color-scheme: light dark; }
   * { box-sizing: border-box; }
@@ -15,6 +51,8 @@
   main { width: 100%; max-width: 640px; }
   h1 { font-size: 1.9rem; margin: .2em 0 .1em; }
   .tag { color: #666; margin: 0 0 1.4em; }
+  .shot { display: block; margin: 0 auto 1.4em; width: auto; height: auto;
+          max-width: 230px; max-height: 460px; border-radius: 16px; border: 1px solid #e3e3e3; }
   .card { background: #fff; border: 1px solid #e3e3e3; border-radius: 14px; padding: 20px 22px; margin: 16px 0; }
   h2 { font-size: 1.05rem; margin: 0 0 .6em; }
   a.btn {
@@ -43,6 +81,7 @@
     body { color: #e8e8e8; background: #121212; }
     .tag, .meta, footer { color: #9a9a9a; }
     .card { background: #1c1c1c; border-color: #2c2c2c; }
+    .shot { border-color: #2c2c2c; }
     .field input { background: #262626; border-color: #3a3a3a; color: #e8e8e8; }
     .field button { background: #2c2c2c; border-color: #3a3a3a; color: #e8e8e8; }
     .meta b { color: #ccc; }
@@ -53,6 +92,9 @@
 <main>
   <h1>🟩 Word Guesser</h1>
   <p class="tag">A tiny, native Android Wordle-style word game. ~72&nbsp;KB. Android 5.0+.</p>
+
+  <img class="shot" src="assets/screenshot.png" width="1080" height="2400"
+       alt="Word Guesser gameplay: the guess TAART with green, yellow and gray letter tiles">
 
   <div class="card">
     <h2>Download</h2>
