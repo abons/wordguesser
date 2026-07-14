@@ -1,0 +1,57 @@
+Categories:
+  - Games
+License: MIT
+AuthorName: hrbons
+AuthorEmail: axel.bons@yoobi.nl
+SourceCode: https://github.com/EDIT-ME/wordguesser-src
+IssueTracker: https://github.com/EDIT-ME/wordguesser-src/issues
+
+AutoName: Word Guesser
+
+Summary: Tiny native Wordle-style word game
+
+Description: |-
+    A tiny, native Android word-guessing game in the Wordle style, written in pure
+    Kotlin using only the Android framework — no AppCompat, Compose, Material, or
+    third-party runtime libraries. The whole UI is built in code, so the APK stays
+    around 72&nbsp;KB.
+
+    Features:
+
+    * Guess the hidden word in six tries, with green / yellow / gray letter hints.
+    * Many languages via downloadable word lists (English, Nederlands, Français,
+      Deutsch, Español and more), fetched on demand and cached offline.
+    * Variable word length (4–8), with the board resizing to fit.
+    * Strict mode (reject non-words) and hard mode (numeric hints instead of colours).
+    * A separate daily puzzle for each word length, with an optional public leaderboard.
+    * Per-language, per-setting statistics.
+    * Accent folding with accented display on match, and language-specific extra keys
+      (German ß, Nordic Æ/Ø, Polish Ł, Croatian Đ).
+    * Optional word lookup (translate / define) via installed apps.
+
+    Word lists are downloaded from their own upstream sources at runtime and are not
+    bundled in the app.
+
+RepoType: git
+Repo: https://github.com/EDIT-ME/wordguesser-src.git
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: v1.0
+    subdir: app
+    gradle:
+      - yes
+
+AntiFeatures:
+  NonFreeNet:
+    en-US: >-
+      Downloads word lists from third-party servers on demand, submits daily-puzzle
+      scores to a public leaderboard (dreamlo), and can hand a word to the proprietary
+      Gemini app for translation/definition. All network use is optional and
+      user-initiated; core play works offline with the built-in English list.
+
+AutoUpdateMode: Version v%v
+UpdateCheckMode: Tags
+CurrentVersion: '1.0'
+CurrentVersionCode: 1

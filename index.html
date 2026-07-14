@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Word Guesser — download</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    line-height: 1.5; color: #111; background: #fafafa;
+    display: flex; justify-content: center; padding: 24px;
+  }
+  main { width: 100%; max-width: 640px; }
+  h1 { font-size: 1.9rem; margin: .2em 0 .1em; }
+  .tag { color: #666; margin: 0 0 1.4em; }
+  .card { background: #fff; border: 1px solid #e3e3e3; border-radius: 14px; padding: 20px 22px; margin: 16px 0; }
+  h2 { font-size: 1.05rem; margin: 0 0 .6em; }
+  a.btn {
+    display: inline-block; background: #16a34a; color: #fff; text-decoration: none;
+    font-weight: 600; padding: 14px 22px; border-radius: 10px; font-size: 1.05rem;
+  }
+  a.btn.alt { background: #2563eb; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  code, .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .82rem; }
+  .field {
+    display: flex; gap: 8px; margin-top: 10px;
+  }
+  .field input {
+    flex: 1; min-width: 0; padding: 10px 12px; border: 1px solid #ccc; border-radius: 8px;
+    font-family: ui-monospace, monospace; font-size: .8rem; background: #f6f6f6; color: #111;
+  }
+  .field button {
+    padding: 10px 14px; border: 1px solid #ccc; border-radius: 8px; background: #eee; cursor: pointer; font-weight: 600;
+  }
+  ol { padding-left: 1.2em; } li { margin: .3em 0; }
+  .meta { color: #666; font-size: .85rem; margin-top: 14px; word-break: break-all; }
+  .meta b { color: #444; }
+  footer { color: #888; font-size: .8rem; margin-top: 24px; text-align: center; }
+  footer a { color: #16a34a; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e8e8; background: #121212; }
+    .tag, .meta, footer { color: #9a9a9a; }
+    .card { background: #1c1c1c; border-color: #2c2c2c; }
+    .field input { background: #262626; border-color: #3a3a3a; color: #e8e8e8; }
+    .field button { background: #2c2c2c; border-color: #3a3a3a; color: #e8e8e8; }
+    .meta b { color: #ccc; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>🟩 Word Guesser</h1>
+  <p class="tag">A tiny, native Android Wordle-style word game. ~72&nbsp;KB. Android 5.0+.</p>
+
+  <div class="card">
+    <h2>Download</h2>
+    <div class="row">
+      <a class="btn" id="apk" href="fdroid/repo/com.hrbons.wordguesser_1.apk" download>Download APK (v1.0)</a>
+    </div>
+    <p class="meta">You may need to allow "install unknown apps" for your browser. Verify integrity if you like:<br>
+      <b>SHA-256:</b> <span class="mono">1b92ade12b437931267abd73baeba2983a9330a95bdcb4c4ddd8098fa4cef74f</span></p>
+  </div>
+
+  <div class="card">
+    <h2>Get updates via F-Droid</h2>
+    <p>Add this repository in the <a href="https://f-droid.org/" >F-Droid</a> app and you'll get future versions automatically.</p>
+    <div class="row" style="margin:12px 0">
+      <a class="btn alt" id="fdroidlink" href="#">Add to F-Droid</a>
+    </div>
+    <p style="margin:.4em 0 0">Or add it manually — repository address:</p>
+    <div class="field">
+      <input id="repourl" readonly value="">
+      <button data-copy="repourl">Copy</button>
+    </div>
+    <p style="margin:1em 0 .2em">Fingerprint (verify this matches in F-Droid):</p>
+    <div class="field">
+      <input id="fp" readonly value="C74E4BC48DBE3CCF800A859BC5A9118B23A19BA38C8B33573DBA1BDEB7E456EE">
+      <button data-copy="fp">Copy</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>How to add manually in F-Droid</h2>
+    <ol>
+      <li>Install the <a href="https://f-droid.org/">F-Droid</a> client.</li>
+      <li>Go to <b>Settings → Repositories → +</b> (add).</li>
+      <li>Paste the repository address above.</li>
+      <li>Confirm the fingerprint matches, then enable the repo.</li>
+      <li>Search for <b>Word Guesser</b> and install.</li>
+    </ol>
+  </div>
+
+  <footer>
+    Built with <a href="https://ko-fi.com/hrbons">☕ support the dev</a> · signed by CN=hrbons
+  </footer>
+</main>
+
+<script>
+  // Build the repo URLs from wherever this page is actually hosted, so nothing needs editing.
+  var base = location.origin + location.pathname.replace(/\/index\.html$/, "").replace(/\/$/, "");
+  var repoUrl = base + "/fdroid/repo";
+  var fp = document.getElementById("fp").value;
+  document.getElementById("repourl").value = repoUrl;
+  var addUrl = repoUrl + "?fingerprint=" + fp;
+  document.getElementById("fdroidlink").href = "fdroidrepos://" + repoUrl.replace(/^https?:\/\//, "") + "?fingerprint=" + fp;
+  document.querySelectorAll("button[data-copy]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var el = document.getElementById(b.getAttribute("data-copy"));
+      el.select(); navigator.clipboard && navigator.clipboard.writeText(el.value);
+      var t = b.textContent; b.textContent = "Copied"; setTimeout(function () { b.textContent = t; }, 1200);
+    });
+  });
+</script>
+</body>
+</html>
