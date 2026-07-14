@@ -3,8 +3,8 @@ Categories:
 License: MIT
 AuthorName: hrbons
 AuthorEmail: axel.bons@yoobi.nl
-SourceCode: https://github.com/EDIT-ME/wordguesser-src
-IssueTracker: https://github.com/EDIT-ME/wordguesser-src/issues
+SourceCode: https://github.com/abons/wordguesser-src
+IssueTracker: https://github.com/abons/wordguesser-src/issues
 
 AutoName: Word Guesser
 
@@ -33,7 +33,7 @@ Description: |-
     bundled in the app.
 
 RepoType: git
-Repo: https://github.com/EDIT-ME/wordguesser-src.git
+Repo: https://github.com/abons/wordguesser-src.git
 
 Builds:
   - versionName: '1.0'
