@@ -26,5 +26,14 @@ Built by [`build-nl-defs.py`](build-nl-defs.py) from the sources above:
   (e.g. "vervoeging van …", "meervoud van …") are not treated as definitions.
 - Collapsed whitespace and truncated each definition to 180 characters.
 
-No definitions were rewritten; they are excerpts of the original Wiktionary glosses.
-Regenerate with `python build-nl-defs.py`.
+No Wiktionary definitions were rewritten; they are excerpts of the original glosses.
+Regenerate the Wiktionary-derived part with `python build-nl-defs.py`.
+
+## Added original definitions (the gaps)
+
+~5,484 accept words that Wiktionary does not cover were given **original, concise
+definitions written for this project** (not derived from any external source). These
+original entries are dedicated to the public domain (CC0) by the author; you may treat them
+as freely reusable. They ensure every game word has an offline definition (no online AI
+needed). The rest of the file remains Wiktionary-derived under CC BY-SA 3.0, so the file as a
+whole is distributed under CC BY-SA 3.0.
