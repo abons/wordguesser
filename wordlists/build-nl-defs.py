@@ -37,6 +37,35 @@ def fold(w: str) -> str:
 
 LETTERS = re.compile(r"[A-Za-z]+$")
 
+# Grammatical words that make up formulaic "form-of" glosses ("… van <base>").
+# Mirrors MainActivity.FORM_OF_WORDS. A gloss is a form-of pointer only when every
+# word before the final " van <base>" is in this set; the app then resolves it to the
+# base word's real definition. We therefore also keep base defs even for bases that
+# fall outside the 4-8 length filter (used ONLY for resolution, never as guess/answer).
+FORM_OF_WORDS = set("""
+van de het eerste tweede derde persoon enkelvoud meervoud tegenwoordige verleden tijd
+voltooid onvoltooid deelwoord verbogen onverbogen vorm stellende vergrotende overtreffende
+trap partitief genitief datief nominatief accusatief aanvoegende gebiedende wijs vervoeging
+verbuiging beklemtoonde onbeklemtoonde nadrukkelijke onnadrukkelijke onzijdig mannelijk
+vrouwelijk mannelijke vrouwelijke onpersoonlijke persoonlijke verkleinvorm verkleinwoord
+verkorting verouderde oude dialectvorm dialectische schrijfwijze spelling spellingvariant
+spellingsvariant zelfstandig naamwoord bijvoeglijk werkwoord bijwoord telwoord
+""".split())
+BASE_OK = re.compile(r"^[a-zà-ÿ]+(?:[-'][a-zà-ÿ]+)*$", re.IGNORECASE)
+
+def form_of_base(gloss: str):
+    t = gloss.strip().rstrip(".")
+    i = t.lower().rfind(" van ")
+    if i < 0:
+        return None
+    base = t[i + 5:].strip().lower()
+    if not base or " " in base or not BASE_OK.match(base):
+        return None
+    words = [w for w in t[:i].lower().split() if w]
+    if not words or any(w not in FORM_OF_WORDS for w in words):
+        return None
+    return base
+
 def is_valid(w: str) -> bool:
     # mirror WordLists.clean(): no uppercase, folded length 4..8, letters only
     if any(c.isupper() for c in w):
@@ -96,6 +125,7 @@ def main():
     accept_set = set(accept)
     defs = {}          # word -> gloss (real or inflection pointer)
     real_words = set()  # words whose gloss is a real definition (the answer pool)
+    real_all = {}       # ANY nl word -> real gloss (for resolving out-of-range bases)
     seen = 0
     with urllib.request.urlopen(req) as resp:
         gz = gzip.GzipFile(fileobj=resp)
@@ -113,9 +143,15 @@ def main():
             if d.get("lang_code") != "nl":
                 continue
             wl = d.get("word", "").lower()
-            if not wl or wl not in accept_set:
+            if not wl:
                 continue
             g, is_real = best_gloss(d.get("senses", []))
+            # Keep the first REAL gloss for any word, so form-of bases that fall outside
+            # the 4-8 filter (long infinitives, short nouns) can still be resolved.
+            if is_real and g and wl not in real_all:
+                real_all[wl] = g
+            if wl not in accept_set:
+                continue
             if g and (wl not in real_words):  # first real def wins; else keep first pointer
                 if is_real:
                     defs[wl] = g
@@ -123,6 +159,15 @@ def main():
                 elif wl not in defs:
                     defs[wl] = g
     answers = sorted(real_words)
+
+    # Add real definitions for the base words that form-of pointers reference but that
+    # aren't already in defs (e.g. "verkennen" behind "… verleden tijd van verkennen").
+    # These are resolution targets only — NOT added to accept/answers.
+    bases = {b for gloss in defs.values() if (b := form_of_base(gloss)) and b not in defs}
+    added = {b: real_all[b] for b in bases if b in real_all}
+    defs.update(added)
+    print(f"form-of base defs added (out-of-range resolution targets): {len(added)} "
+          f"of {len(bases)} referenced", flush=True)
     OUT_ACCEPT.write_text("\n".join(accept) + "\n", encoding="utf-8")
     OUT_WORDS.write_text("\n".join(answers) + "\n", encoding="utf-8")
     with open(OUT_DEFS, "w", encoding="utf-8") as f:
