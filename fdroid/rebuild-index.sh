@@ -22,6 +22,8 @@ ALIAS="$(get FDROID_REPO_KEY_ALIAS)"
 TS=$(( $(date +%s) * 1000 ))
 
 pkgs=""
+maxvc=0
+maxvn=""
 for apk in "$REPO"/*.apk; do
   [ -e "$apk" ] || { echo "no APKs in $REPO"; exit 1; }
   badging="$("$AAPT" dump badging "$apk")"
@@ -54,6 +56,7 @@ for apk in "$REPO"/*.apk; do
 PKG
 )
   pkgs="${pkgs:+$pkgs,}$entry"
+  if [ "$vc" -gt "$maxvc" ]; then maxvc=$vc; maxvn=$vn; fi
   echo "indexed $(basename "$apk"): $pkg v$vn ($vc)"
 done
 
@@ -78,8 +81,8 @@ cat > "$REPO/index-v1.json" <<JSON
       "categories": ["Games"],
       "added": $TS,
       "lastUpdated": $TS,
-      "suggestedVersionName": "1.0",
-      "suggestedVersionCode": "1"
+      "suggestedVersionName": "$maxvn",
+      "suggestedVersionCode": "$maxvc"
     }
   ],
   "packages": {

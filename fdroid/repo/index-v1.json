@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1784069093000,
+    "timestamp": 1784526629000,
     "version": 20002,
     "name": "hrbons apps",
     "icon": "fdroid-icon.png",
@@ -16,10 +16,10 @@
       "description": "A tiny, native Android word-guessing game (Wordle-style) in pure Kotlin.",
       "license": "Proprietary",
       "categories": ["Games"],
-      "added": 1784069093000,
-      "lastUpdated": 1784069093000,
-      "suggestedVersionName": "1.0",
-      "suggestedVersionCode": "1"
+      "added": 1784526629000,
+      "lastUpdated": 1784526629000,
+      "suggestedVersionName": "2.0",
+      "suggestedVersionCode": "2"
     }
   ],
   "packages": {
@@ -37,7 +37,21 @@
         "sig": "066a8bfbdea56d46c224f114a002091d",
         "signer": "f6787964f8e619e59185360034df1ad16de88e13f94a61539e348761cf0e7d63",
         "uses-permission": [ ["android.permission.INTERNET", null] ],
-        "added": 1784069093000
+        "added": 1784526629000
+      },      {
+        "packageName": "com.hrbons.wordguesser",
+        "apkName": "com.hrbons.wordguesser_2.apk",
+        "hash": "cc7cdb15f04a2f470f794ed6f54fa0ad4d0cbefb29152d4b6a77797bc8d10246",
+        "hashType": "sha256",
+        "versionName": "2.0",
+        "versionCode": 2,
+        "size": 99831,
+        "minSdkVersion": 21,
+        "targetSdkVersion": 34,
+        "sig": "066a8bfbdea56d46c224f114a002091d",
+        "signer": "f6787964f8e619e59185360034df1ad16de88e13f94a61539e348761cf0e7d63",
+        "uses-permission": [ ["android.permission.INTERNET", null] ],
+        "added": 1784526629000
       }
     ]
   }
