@@ -10,6 +10,11 @@ that licence text is copied verbatim into [`licenses/`](licenses/). No words add
 
 Built by [`build-lists.py`](build-lists.py) (`python build-lists.py [code …]`).
 
+One file here is **not** a word list and none of the above applies to it:
+[`nl-freq-v1.txt`](nl-freq-v1.txt) is a familiarity *ranking* of the words already in `nl.txt`
+(most-common-first), used by Word Swipe to pick recognisable puzzle seeds. It has its own upstream
+and licence — see [NL-FREQ-README.md](NL-FREQ-README.md).
+
 ## Published files are immutable
 
 This directory is served straight off GitHub Pages to every installed copy of the app,
@@ -39,6 +44,7 @@ as version 1. The next Dutch pool change becomes `nl-v2.txt` beside them.
 | --- | --- | --- | --- | --- | --- | --- |
 | English (large) | [en-v1.txt](en-v1.txt) | 146,606 | [dwyl/english-words](https://github.com/dwyl/english-words) | dwyl and contributors | `Unlicense` | [licenses/en-v1.txt](licenses/en-v1.txt) |
 | Nederlands | [nl.txt](nl.txt) *(+ accept list & definitions — see [NL-README.md](NL-README.md))* | see NL-README | [OpenTaal (approved base words)](https://github.com/OpenTaal/opentaal-wordlist) | Stichting OpenTaal | `CC-BY-3.0 OR BSD-3-Clause` | [upstream](https://creativecommons.org/licenses/by/3.0/) |
+| Nederlands *(ranking, not a word list)* | [nl-freq-v1.txt](nl-freq-v1.txt) *(see [NL-FREQ-README.md](NL-FREQ-README.md))* | 25,037 | [hermitdave/FrequencyWords · OpenSubtitles 2018](https://github.com/hermitdave/FrequencyWords) | Hermit Dave and contributors | `CC-BY-SA-4.0` | [upstream](https://creativecommons.org/licenses/by-sa/4.0/) |
 | Français | [fr-v1.txt](fr-v1.txt) | 91,071 | [lorenbrichter/Words](https://github.com/lorenbrichter/Words) | Loren Brichter | `CC0-1.0` | [licenses/fr-v1.txt](licenses/fr-v1.txt) |
 | Deutsch | [de-v1.txt](de-v1.txt) | 75,977 | [enz/german-wordlist](https://github.com/enz/german-wordlist) | Matthias Enzmann and contributors | `CC0-1.0` | [licenses/de-v1.txt](licenses/de-v1.txt) |
 | Español | [es-v1.txt](es-v1.txt) | 163,791 | [lorenbrichter/Words](https://github.com/lorenbrichter/Words) | Loren Brichter | `CC0-1.0` | [licenses/es-v1.txt](licenses/es-v1.txt) |
