@@ -1,0 +1,9 @@
+# F-Droid index metadata for com.hrbons.wordfinder.
+# Sourced by ../rebuild-index.sh — plain shell assignments, no jq needed.
+# NAME matches the launcher label (values/strings.xml app_name), not the package name:
+# the package is historically "wordfinder" while the app ships as Word Swipe.
+NAME="Word Swipe"
+SUMMARY="Swipe letters to fill a crossword - tiny, native, offline"
+DESCRIPTION="A tiny, native Android word game: a wheel of letters at the bottom, a crossword grid at the top. Every word in a level can be spelled from one base word - swipe across the wheel to spell it and the grid fills in. Valid words that are not in the grid count as bonus words and pay coins, which buy hints. Dutch word lists with offline definitions, a seeded daily puzzle that is the same for everyone, plus free play, statistics and a daily streak. Pure Kotlin on the Android framework only: no ads, no tracking, no third-party libraries."
+LICENSE="Proprietary"
+CATEGORIES='["Games"]'

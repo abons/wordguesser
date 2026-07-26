@@ -80,6 +80,21 @@ gh release create v1.0 fdroid/repo/com.hrbons.wordguesser_1.apk \
 4. Run `bash dist/fdroid/rebuild-index.sh` to regenerate + re-sign the index.
 5. Commit & push the dist repo. F-Droid clients pick up the update automatically.
 
+## Adding another app to the same repo
+
+The F-Droid repo is deliberately shared by all hrbons apps — one URL, one fingerprint, one
+`fdroid-repo.keystore` — so existing subscribers get a new app automatically instead of
+having to add a second repo.
+
+1. Write `fdroid/apps/<packageName>.meta` (name, summary, description, license, categories).
+   It is sourced by `rebuild-index.sh`; a missing file is a hard error, so no app can be
+   published nameless. Everything else — version, size, hash, signer, SDK levels,
+   permissions — is read from the APK, so the index cannot disagree with the release.
+2. Drop the signed APK into `fdroid/repo/` as `<packageName>_<versionCode>.apk`.
+3. `bash fdroid/rebuild-index.sh` — APKs are grouped by the package name from the APK, and
+   each app gets its own version list and its own `suggestedVersionCode`.
+4. Add the app to the landing page, then commit & push the dist repo.
+
 **Never delete or lose** `fdroid-repo.keystore` (repo index signing) or `release.keystore`
 (app signing) — both live outside every repo (path in `local.properties`) and are required
 for updates to be trusted.

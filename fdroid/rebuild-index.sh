@@ -1,13 +1,31 @@
 #!/usr/bin/env bash
 # Rebuild + sign the F-Droid repo index for every APK in ./repo/.
+#
+# The repo is deliberately shared by all hrbons apps (one URL, one fingerprint, one
+# keystore), so this script is multi-app: APKs are grouped by the package name read
+# from the APK itself, and each package gets its own "apps" entry and its own version
+# list. Human-written fields (name, summary, description, license, categories) come
+# from ./apps/<packageName>.meta — one small shell-sourceable file per app. Everything
+# else (version, size, hash, signer, SDK levels, permissions) is derived from the APK,
+# so a release can never disagree with the index about what it actually is.
+#
 # Run this after dropping a new signed app-release.apk into ./repo/ (renamed
-# com.hrbons.wordguesser_<versionCode>.apk). Reads the repo-signing keystore
-# password from ../../local.properties (gitignored). Requires JDK (jar/jarsigner/
-# keytool) + Android build-tools (aapt, apksigner) — same toolchain as the app build.
+# <packageName>_<versionCode>.apk). Adding a new app = drop its APK + write its .meta;
+# a missing .meta is a hard error rather than an app published without a name.
+#
+# Reads the repo-signing keystore password from ../../local.properties (gitignored).
+# Requires JDK (jar/jarsigner) + Android build-tools (aapt, apksigner) — same toolchain
+# as the app build.
+#
+# Known wart, unchanged from the single-app version: "added" is stamped with the current
+# run for every app and APK, so each rebuild makes everything look newly added (it only
+# affects "what's new" sorting in F-Droid clients). Fixing it means persisting first-seen
+# timestamps; not worth a JSON reader in bash yet.
 set -euo pipefail
 
 HERE="$(cd "$(dirname "$0")" && pwd)"
 REPO="$HERE/repo"
+APPS="$HERE/apps"
 ROOT="$(cd "$HERE/../.." && pwd)"
 LP="$ROOT/local.properties"
 
@@ -24,9 +42,11 @@ ALIAS="$(get FDROID_REPO_KEY_ALIAS)"
 
 TS=$(( $(date +%s) * 1000 ))
 
-pkgs=""
-maxvc=0
-maxvn=""
+# Minimal JSON string escaping for the hand-written metadata fields.
+jstr() { printf '%s' "$1" | sed -e 's/\\/\\\\/g' -e 's/"/\\"/g'; }
+
+declare -A ENTRIES MAXVC MAXVN
+
 for apk in "$REPO"/*.apk; do
   [ -e "$apk" ] || { echo "no APKs in $REPO"; exit 1; }
   badging="$("$AAPT" dump badging "$apk")"
@@ -40,6 +60,12 @@ for apk in "$REPO"/*.apk; do
   certs="$("$APKSIGNER" verify --print-certs "$apk")"
   signer=$(echo "$certs" | sed -n 's/.*SHA-256 digest: \([0-9a-f]*\).*/\1/p' | head -1)
   sig=$(echo "$certs"    | sed -n 's/.*MD5 digest: \([0-9a-f]*\).*/\1/p' | head -1)
+  # Permissions come from the APK, so the index cannot understate what an app asks for.
+  perms=""
+  while read -r p; do
+    [ -n "$p" ] || continue
+    perms="${perms:+$perms, }[\"$p\", null]"
+  done < <(echo "$badging" | sed -n "s/^uses-permission: name='\([^']*\)'.*/\1/p")
   entry=$(cat <<PKG
       {
         "packageName": "$pkg",
@@ -53,14 +79,52 @@ for apk in "$REPO"/*.apk; do
         "targetSdkVersion": $tgtsdk,
         "sig": "$sig",
         "signer": "$signer",
-        "uses-permission": [ ["android.permission.INTERNET", null] ],
+        "uses-permission": [ $perms ],
         "added": $TS
       }
 PKG
 )
-  pkgs="${pkgs:+$pkgs,}$entry"
-  if [ "$vc" -gt "$maxvc" ]; then maxvc=$vc; maxvn=$vn; fi
+  ENTRIES[$pkg]="${ENTRIES[$pkg]:+${ENTRIES[$pkg]},}$entry"
+  if [ "${MAXVC[$pkg]:-0}" -lt "$vc" ]; then MAXVC[$pkg]=$vc; MAXVN[$pkg]=$vn; fi
   echo "indexed $(basename "$apk"): $pkg v$vn ($vc)"
+done
+
+# Deterministic app order, so a rebuild with no new APK produces the same index.
+mapfile -t pkglist < <(printf '%s\n' "${!ENTRIES[@]}" | sort)
+
+apps_json=""
+packages_json=""
+for pkg in "${pkglist[@]}"; do
+  meta="$APPS/$pkg.meta"
+  [ -f "$meta" ] || { echo "missing metadata: $meta (write it before publishing $pkg)"; exit 1; }
+  NAME=""; SUMMARY=""; DESCRIPTION=""; LICENSE=""; CATEGORIES=""
+  # shellcheck source=/dev/null
+  . "$meta"
+  for field in NAME SUMMARY DESCRIPTION LICENSE CATEGORIES; do
+    [ -n "${!field}" ] || { echo "$meta: $field is empty"; exit 1; }
+  done
+  app=$(cat <<APP
+    {
+      "packageName": "$pkg",
+      "name": "$(jstr "$NAME")",
+      "summary": "$(jstr "$SUMMARY")",
+      "description": "$(jstr "$DESCRIPTION")",
+      "license": "$(jstr "$LICENSE")",
+      "categories": $CATEGORIES,
+      "added": $TS,
+      "lastUpdated": $TS,
+      "suggestedVersionName": "${MAXVN[$pkg]}",
+      "suggestedVersionCode": "${MAXVC[$pkg]}"
+    }
+APP
+)
+  apps_json="${apps_json:+$apps_json,
+}$app"
+  packages_json="${packages_json:+$packages_json,
+}    \"$pkg\": [
+${ENTRIES[$pkg]}
+    ]"
+  echo "app $pkg -> $NAME (suggested v${MAXVN[$pkg]} / ${MAXVC[$pkg]})"
 done
 
 cat > "$REPO/index-v1.json" <<JSON
@@ -75,23 +139,10 @@ cat > "$REPO/index-v1.json" <<JSON
   },
   "requests": { "install": [], "uninstall": [] },
   "apps": [
-    {
-      "packageName": "com.hrbons.wordguesser",
-      "name": "Word Guesser",
-      "summary": "Tiny native Wordle-style word game",
-      "description": "A tiny, native Android word-guessing game (Wordle-style) in pure Kotlin.",
-      "license": "Proprietary",
-      "categories": ["Games"],
-      "added": $TS,
-      "lastUpdated": $TS,
-      "suggestedVersionName": "$maxvn",
-      "suggestedVersionCode": "$maxvc"
-    }
+$apps_json
   ],
   "packages": {
-    "com.hrbons.wordguesser": [
-$pkgs
-    ]
+$packages_json
   }
 }
 JSON

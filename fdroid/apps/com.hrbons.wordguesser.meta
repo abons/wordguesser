@@ -1,0 +1,9 @@
+# F-Droid index metadata for com.hrbons.wordguesser.
+# Sourced by ../rebuild-index.sh — plain shell assignments, no jq needed.
+# Everything else in the index (version, size, hash, signer, SDK levels, permissions)
+# is read from the APK itself, so only human-written fields live here.
+NAME="Word Guesser"
+SUMMARY="Tiny native Wordle-style word game"
+DESCRIPTION="A tiny, native Android word-guessing game (Wordle-style) in pure Kotlin."
+LICENSE="Proprietary"
+CATEGORIES='["Games"]'
