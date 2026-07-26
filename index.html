@@ -81,6 +81,9 @@
   .pill { font-size: .72rem; font-weight: 600; padding: 2px 7px; border-radius: 999px;
           background: #e8f5ec; color: #16733a; white-space: nowrap; }
   .pill.soon { background: #eee; color: #666; }
+  /* A released game's pill doubles as its download link — keep it looking like a pill. */
+  a.pill { text-decoration: none; }
+  a.pill:hover { text-decoration: underline; }
   .meta { color: #666; font-size: .85rem; margin-top: 14px; word-break: break-all; }
   .meta b { color: #444; }
   footer { color: #888; font-size: .8rem; margin-top: 24px; text-align: center; }
@@ -152,7 +155,8 @@
     <ul class="games">
       <li><span class="n">Word Guesser</span> <span class="pill">v2.1 — this page</span>
         <span class="d">Wordle-style guessing, 17 languages, daily puzzle, duels.</span></li>
-      <li><span class="n">Word Swipe</span> <span class="pill soon">coming soon</span>
+      <li><span class="n">Word Swipe</span>
+        <a class="pill" href="fdroid/repo/com.hrbons.wordfinder_1.apk" download>v1.0 — download APK</a>
         <span class="d">Swipe letters on a wheel to fill a crossword; bonus words pay for hints.</span></li>
       <li><span class="n">Word Cross</span> <span class="pill soon">coming soon</span>
         <span class="d">Crossword puzzles built from Dutch words and their definitions.</span></li>
