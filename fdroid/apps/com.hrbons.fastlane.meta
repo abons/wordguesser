@@ -1,0 +1,10 @@
+# F-Droid index metadata for com.hrbons.fastlane.
+# Sourced by ../rebuild-index.sh — plain shell assignments, no jq needed.
+# NAME matches the launcher label (values/strings.xml app_name); the Dutch launcher name is
+# "De Snelle Weg" (values-nl), but the index carries one name and the repo is English.
+# The interface itself is Dutch — the SUMMARY says so, so nobody installs it expecting English.
+NAME="Fast Lane"
+SUMMARY="Life-simulation in the spirit of Jones in the Fast Lane - Dutch, tiny, native, offline"
+DESCRIPTION="A tiny, native Android life-simulation in the spirit of Jones in the Fast Lane (Sierra, 1990). Walk a generated city - your flat, two schools, an employment office, two employers, a supermarket, a department store, a bank - and build up wealth, education, happiness and career within a limited number of weeks, against an AI rival that plays the same city by the same rules. Every week rotates: which vacancies are open, which school teaches, where the queues are, and how prices and wages move, so there is no single memorised route. Plus a seeded daily challenge that is the same city for everyone, statistics, a daily streak and earnable coins. Pure Kotlin on the Android framework only: no ads, no tracking, no third-party libraries. The interface is in Dutch."
+LICENSE="Proprietary"
+CATEGORIES='["Games"]'
