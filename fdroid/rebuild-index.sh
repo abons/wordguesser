@@ -15,7 +15,10 @@ get() { grep "^$1=" "$LP" | head -1 | sed "s/^$1=//"; }
 SDK="$(get sdk.dir | sed 's#\\#/#g')"
 BT="$SDK/build-tools/36.0.0"
 AAPT="$BT/aapt.exe"; APKSIGNER="$BT/apksigner.bat"
-KS="$ROOT/$(get FDROID_REPO_STORE_FILE)"
+# The keystore now lives outside every repo, so the property holds an absolute path.
+# Still accept a project-relative one for older local.properties files.
+KS="$(get FDROID_REPO_STORE_FILE | sed 's#\\#/#g')"
+case "$KS" in /*|[A-Za-z]:/*) ;; *) KS="$ROOT/$KS" ;; esac
 KSPASS="$(get FDROID_REPO_STORE_PASSWORD)"
 ALIAS="$(get FDROID_REPO_KEY_ALIAS)"
 

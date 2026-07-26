@@ -81,4 +81,5 @@ gh release create v1.0 fdroid/repo/com.hrbons.wordguesser_1.apk \
 5. Commit & push the dist repo. F-Droid clients pick up the update automatically.
 
 **Never delete or lose** `fdroid-repo.keystore` (repo index signing) or `release.keystore`
-(app signing) — both are gitignored and required for updates to be trusted.
+(app signing) — both live outside every repo (path in `local.properties`) and are required
+for updates to be trusted.
