@@ -69,6 +69,9 @@ If you enjoy it, you can [☕ support the developer on Ko-fi](https://ko-fi.com/
 
 ---
 
-*This repository hosts the public download page and a self-hosted F-Droid repository. The app
-is signed by CN=hrbons. Word lists are © their respective authors and downloaded from their
-own sources at runtime — none are redistributed here.*
+*This repository hosts the public download page, a self-hosted F-Droid repository, and the
+word lists the app downloads at runtime. The app is signed by CN=hrbons. The lists are ©
+their respective authors and are mirrored here as filtered derivatives, each under its own
+upstream licence — see [`wordlists/SOURCES.md`](wordlists/SOURCES.md) for the full
+per-language attribution and [`wordlists/licenses/`](wordlists/licenses/) for the licence
+texts.*

@@ -1,0 +1,5 @@
+__pycache__/
+
+# Intermediates from the Dutch definitions pipeline (build-nl-defs.py / augment-nl-defs.py).
+_missing-defs.txt
+words_tmp.txt
