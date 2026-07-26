@@ -5,5 +5,5 @@
 NAME="Word Guesser"
 SUMMARY="Tiny native Wordle-style word game"
 DESCRIPTION="A tiny, native Android word-guessing game (Wordle-style) in pure Kotlin."
-LICENSE="Proprietary"
+LICENSE="MIT"
 CATEGORIES='["Games"]'

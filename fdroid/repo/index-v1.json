@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1785077433000,
+    "timestamp": 1785080350000,
     "version": 20002,
     "name": "hrbons apps",
     "icon": "fdroid-icon.png",
@@ -16,8 +16,8 @@
       "description": "A tiny, native Android word game: a wheel of letters at the bottom, a crossword grid at the top. Every word in a level can be spelled from one base word - swipe across the wheel to spell it and the grid fills in. Valid words that are not in the grid count as bonus words and pay coins, which buy hints. Dutch word lists with offline definitions, a seeded daily puzzle that is the same for everyone, plus free play, statistics and a daily streak. Pure Kotlin on the Android framework only: no ads, no tracking, no third-party libraries.",
       "license": "Proprietary",
       "categories": ["Games"],
-      "added": 1785077433000,
-      "lastUpdated": 1785077433000,
+      "added": 1785080350000,
+      "lastUpdated": 1785080350000,
       "suggestedVersionName": "1.0",
       "suggestedVersionCode": "1"
     },
@@ -26,12 +26,12 @@
       "name": "Word Guesser",
       "summary": "Tiny native Wordle-style word game",
       "description": "A tiny, native Android word-guessing game (Wordle-style) in pure Kotlin.",
-      "license": "Proprietary",
+      "license": "MIT",
       "categories": ["Games"],
-      "added": 1785077433000,
-      "lastUpdated": 1785077433000,
-      "suggestedVersionName": "2.1",
-      "suggestedVersionCode": "3"
+      "added": 1785080350000,
+      "lastUpdated": 1785080350000,
+      "suggestedVersionName": "2.2",
+      "suggestedVersionCode": "4"
     }
   ],
   "packages": {
@@ -49,7 +49,7 @@
         "sig": "ab944fb8e45eec1b08e6473a52613f7f",
         "signer": "c36d16fa6a57a037f1f640322ac6b8c17b96500dab175c49bc63f2186c5777cd",
         "uses-permission": [ ["android.permission.INTERNET", null], ["android.permission.ACCESS_NETWORK_STATE", null] ],
-        "added": 1785077433000
+        "added": 1785080350000
       }
     ],
     "com.hrbons.wordguesser": [
@@ -66,7 +66,7 @@
         "sig": "066a8bfbdea56d46c224f114a002091d",
         "signer": "f6787964f8e619e59185360034df1ad16de88e13f94a61539e348761cf0e7d63",
         "uses-permission": [ ["android.permission.INTERNET", null] ],
-        "added": 1785077433000
+        "added": 1785080350000
       },      {
         "packageName": "com.hrbons.wordguesser",
         "apkName": "com.hrbons.wordguesser_2.apk",
@@ -80,7 +80,7 @@
         "sig": "066a8bfbdea56d46c224f114a002091d",
         "signer": "f6787964f8e619e59185360034df1ad16de88e13f94a61539e348761cf0e7d63",
         "uses-permission": [ ["android.permission.INTERNET", null] ],
-        "added": 1785077433000
+        "added": 1785080350000
       },      {
         "packageName": "com.hrbons.wordguesser",
         "apkName": "com.hrbons.wordguesser_3.apk",
@@ -94,7 +94,21 @@
         "sig": "066a8bfbdea56d46c224f114a002091d",
         "signer": "f6787964f8e619e59185360034df1ad16de88e13f94a61539e348761cf0e7d63",
         "uses-permission": [ ["android.permission.INTERNET", null] ],
-        "added": 1785077433000
+        "added": 1785080350000
+      },      {
+        "packageName": "com.hrbons.wordguesser",
+        "apkName": "com.hrbons.wordguesser_4.apk",
+        "hash": "5171622e11af6ba8f1a599a4b32bf6f01afba78a8c5b9f3d63687ce3f98227ce",
+        "hashType": "sha256",
+        "versionName": "2.2",
+        "versionCode": 4,
+        "size": 107251,
+        "minSdkVersion": 21,
+        "targetSdkVersion": 34,
+        "sig": "066a8bfbdea56d46c224f114a002091d",
+        "signer": "f6787964f8e619e59185360034df1ad16de88e13f94a61539e348761cf0e7d63",
+        "uses-permission": [ ["android.permission.INTERNET", null] ],
+        "added": 1785080350000
       }
     ]
   }
