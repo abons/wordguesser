@@ -56,18 +56,26 @@ git commit -m "Word Guesser 1.0"
 gh repo create wordguesser-src --private --source=. --push
 ```
 
-`.gitignore` already excludes `local.properties`, `*.keystore`, `*.jks`, and build
-output, so **no secrets get pushed**. Double-check with `git status` before the first push.
+`.gitignore` already excludes `local.properties`, `*.keystore`, `*.jks`, and build output, so no
+keystore and no signing password gets pushed. ⚠️ That is **not** the same as "no secrets": a key
+hard-coded in a source file is tracked like any other line of code. Grep the sources for keys
+before you make a repo public, not just `git status`.
 
-### Optional: a GitHub Release with the APK attached
+### A GitHub Release with the APK attached (part of every release since v2.3)
 
-In the **public** dist repo (so the download link is public):
+In the **public** dist repo, so the download link is public. Attach the APK you already
+published — never a rebuild, or two different sets of bytes end up under one version number:
 
 ```bash
 cd dist
-gh release create v1.0 fdroid/repo/com.hrbons.wordguesser_1.apk \
-  -t "Word Guesser 1.0" -n "First public release. Android 5.0+."
+gh release create v2.3 fdroid/repo/com.hrbons.wordguesser_5.apk \
+  --target "$(git rev-parse HEAD)" \
+  -t "Word Guesser 2.3 — the scenic-backdrop release" --notes-file notes.md
 ```
+
+`--target` needs a branch name or a **full** SHA; a short one fails with HTTP 422. The APK stays
+a tracked file in `fdroid/repo/` as well — this repo is also the F-Droid host, so it can't move
+the bytes into releases the way the sibling repos do.
 
 ---
 
