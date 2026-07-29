@@ -8,8 +8,9 @@
 # repo is private and carries no LICENSE file, so "Proprietary" is the only factually true value,
 # and the apps are meant to earn — MIT would hand everyone the right to rebuild this and ship it
 # themselves. Proprietary -> MIT later is free; the reverse retracts a granted licence.
-# (wordguesser is MIT because abons/wordguesser-src really is public, with a LICENSE file. That is
-# the one exception and it stays that way; it is not the pattern for the others.)
+# (wordguesser was the one exception — MIT, because abons/wordguesser-src really was public. As of
+# 2026-07-29 there is no exception left: that repo is private, its LICENSE file is gone and its meta
+# says Proprietary too. All four now match.)
 NAME="Fast Lane"
 SUMMARY="Life-simulation in the spirit of Jones in the Fast Lane - Dutch, tiny, native, offline"
 DESCRIPTION="A tiny, native Android life-simulation in the spirit of Jones in the Fast Lane (Sierra, 1990). Walk a generated city - your flat, two schools, an employment office, two employers, a supermarket, a department store, a bank - and build up wealth, education, happiness and career within a limited number of weeks, against an AI rival that plays the same city by the same rules. Every week rotates: which vacancies are open, which school teaches, where the queues are, and how prices and wages move, so there is no single memorised route. Plus a seeded daily challenge that is the same city for everyone, statistics, a daily streak and earnable coins. Pure Kotlin on the Android framework only: no ads, no tracking, no third-party libraries. The interface is in Dutch."

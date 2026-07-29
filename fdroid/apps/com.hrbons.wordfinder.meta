@@ -7,8 +7,9 @@
 # repo is private and carries no LICENSE file, so "Proprietary" is the only factually true value,
 # and the apps are meant to earn — MIT would hand everyone the right to rebuild this and ship it
 # themselves. Proprietary -> MIT later is free; the reverse retracts a granted licence.
-# (wordguesser is MIT because abons/wordguesser-src really is public, with a LICENSE file. That is
-# the one exception and it stays that way; it is not the pattern for the others.)
+# (wordguesser was the one exception — MIT, because abons/wordguesser-src really was public. As of
+# 2026-07-29 there is no exception left: that repo is private, its LICENSE file is gone and its meta
+# says Proprietary too. All four now match.)
 NAME="Word Swipe"
 SUMMARY="Swipe letters to fill a crossword - tiny, native, offline"
 DESCRIPTION="A tiny, native Android word game: a wheel of letters at the bottom, a crossword grid at the top. Every word in a level can be spelled from one base word - swipe across the wheel to spell it and the grid fills in. Valid words that are not in the grid count as bonus words and pay coins, which buy hints. Dutch word lists with offline definitions, a seeded daily puzzle that is the same for everyone, plus free play, statistics and a daily streak. Pure Kotlin on the Android framework only: no ads, no tracking, no third-party libraries."

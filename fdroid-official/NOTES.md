@@ -1,5 +1,27 @@
 # Official F-Droid submission — prep notes
 
+> ## ⛔ CLOSED ROUTE (2026-07-29, user decision). Do not act on the steps below.
+>
+> The user weighed this up and overruled it: official F-Droid builds from source, so it requires a
+> **public** source repo, and there is no income anywhere on that path — F-Droid has no paid apps,
+> no in-app purchases and no ad model, and the official catalogue signs with its own key. What was
+> on offer was reach, not revenue, and the price was handing out the right to rebuild and ship the
+> app (see the LICENSE reasoning in `../fdroid/apps/*.meta`: *"the apps are meant to earn"*).
+> Nothing was ever submitted — no RFP issue, no merge request — so nothing had to be withdrawn.
+>
+> What changed on 2026-07-29: `abons/wordguesser-src` is **private**, its MIT `LICENSE` is removed,
+> and `../fdroid/apps/com.hrbons.wordguesser.meta` says `Proprietary`. The prerequisite in point 1
+> below is therefore deliberately unmet.
+>
+> ⚠️ One thing did **not** get undone by going private: the dreamlo write key in `Leaderboard.kt`
+> was publicly readable while the repo was open. It needs rotating — that is an open point in
+> `todo.md`, not something this folder fixes.
+>
+> **Distribution is unaffected.** The self-hosted repo in `../fdroid/`, the landing page and the
+> word lists all serve prebuilt APKs and data out of this public `dist/` repo; none of them read
+> the source repo. Keep this file for the reasoning; reopening the route means redoing the
+> prerequisites, not just reverting a flag.
+
 This folder holds a ready-to-use metadata file for submitting Word Guesser to the
 **official** F-Droid catalogue (`fdroiddata`). This is a different thing from the
 self-hosted repo in `../fdroid/` — here F-Droid's own build servers compile the app

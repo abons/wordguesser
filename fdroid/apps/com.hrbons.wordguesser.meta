@@ -2,8 +2,17 @@
 # Sourced by ../rebuild-index.sh — plain shell assignments, no jq needed.
 # Everything else in the index (version, size, hash, signer, SDK levels, permissions)
 # is read from the APK itself, so only human-written fields live here.
+#
+# LICENSE was "MIT" until 2026-07-29 and is now "Proprietary", matching the other three. The user
+# overruled the exception: abons/wordguesser-src is private again, the MIT LICENSE file is gone,
+# and the official-F-Droid route (which is what the public source and the licence were for) is
+# closed — see ../../fdroid-official/NOTES.md. The reasoning is the same one in the sister files:
+# the apps are meant to earn, and MIT hands everyone the right to rebuild this and ship it.
+# ⚠️ This retracts nothing already granted: v2.3 and earlier were published under MIT and whoever
+# holds those bytes keeps that licence. The live index still says MIT until the next
+# rebuild-index.sh run, which is deliberate — the change takes effect with the next release.
 NAME="Word Guesser"
 SUMMARY="Tiny native Wordle-style word game"
 DESCRIPTION="A tiny, native Android word-guessing game (Wordle-style) in pure Kotlin."
-LICENSE="MIT"
+LICENSE="Proprietary"
 CATEGORIES='["Games"]'

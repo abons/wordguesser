@@ -11,8 +11,9 @@
 # factually true value, and the apps are meant to earn — MIT would hand everyone the right to
 # rebuild this and ship it themselves. Proprietary -> MIT later is free; the reverse retracts a
 # granted licence.
-# (wordguesser is MIT because abons/wordguesser-src really is public, with a LICENSE file. That is
-# the one exception and it stays that way; it is not the pattern for the others.)
+# (wordguesser was the one exception — MIT, because abons/wordguesser-src really was public. As of
+# 2026-07-29 there is no exception left: that repo is private, its LICENSE file is gone and its meta
+# says Proprietary too. All four now match.)
 NAME="Word Cross"
 SUMMARY="Dutch crossword puzzles from word definitions - tiny, native, offline"
 DESCRIPTION="A tiny, native Android crossword game: an interlocking Dutch crossword in which every clue is the answer's own dictionary definition, with the answer itself masked out. Free play offers three puzzle sizes, and a seeded daily puzzle gives everyone the same grid on the same day, alongside statistics and a daily streak. Every puzzle sits on a procedurally drawn scene derived from its seed, so the game ships no image assets at all. The grid is published to screen readers as a virtual view tree, so it can be played with TalkBack. Dutch word lists with offline definitions (Dutch Wiktionary, CC BY-SA 3.0). Pure Kotlin on the Android framework only: no ads, no tracking, no third-party libraries. The puzzles and the interface are in Dutch."
