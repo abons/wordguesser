@@ -8,10 +8,10 @@ IssueTracker: https://github.com/abons/wordguesser-src/issues
 
 AutoName: Word Guesser
 
-Summary: Tiny native Wordle-style word game
+Summary: Tiny native word-guessing game
 
 Description: |-
-    A tiny, native Android word-guessing game in the Wordle style, written in pure
+    A tiny, native Android word-guessing game, written in pure
     Kotlin using only the Android framework — no AppCompat, Compose, Material, or
     third-party runtime libraries. The whole UI is built in code, so the APK stays
     around 72&nbsp;KB.

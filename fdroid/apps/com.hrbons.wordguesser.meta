@@ -12,7 +12,7 @@
 # holds those bytes keeps that licence. The live index still says MIT until the next
 # rebuild-index.sh run, which is deliberate — the change takes effect with the next release.
 NAME="Word Guesser"
-SUMMARY="Tiny native Wordle-style word game"
-DESCRIPTION="A tiny, native Android word-guessing game (Wordle-style) in pure Kotlin."
+SUMMARY="Tiny native word-guessing game"
+DESCRIPTION="A tiny, native Android word-guessing game in pure Kotlin — 17 languages, word length 4-8, daily puzzle, duels."
 LICENSE="Proprietary"
 CATEGORIES='["Games"]'

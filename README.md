@@ -1,6 +1,6 @@
 # 🟩 Word Guesser
 
-**A tiny, native Wordle-style word game for Android** — pure Kotlin, no ads, no trackers,
+**A tiny, native word-guessing game for Android** — pure Kotlin, no ads, no trackers,
 ~72&nbsp;KB. Guess the hidden word in six tries.
 
 ### ▶️ [**Download / F-Droid → abons.github.io/wordguesser**](https://abons.github.io/wordguesser/)
@@ -31,7 +31,7 @@ Then search for **Word Guesser** and install. Updates arrive automatically.
 
 ## Features
 
-- 🟩 Classic Wordle scoring — green / yellow / gray, with correct duplicate-letter handling.
+- 🟩 Classic letter-clue scoring — green / yellow / gray, with correct duplicate-letter handling.
 - 🌍 **Many languages** via downloadable word lists (English, Nederlands, Français, Deutsch,
   Español, and more) — fetched on demand, cached offline.
 - 🔠 **Variable word length** (4–8) — the board resizes to fit.
