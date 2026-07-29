@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1785275885000,
+    "timestamp": 1785345098000,
     "version": 20002,
     "name": "hrbons apps",
     "icon": "fdroid-icon.png",
@@ -16,8 +16,8 @@
       "description": "A tiny, native Android life-simulation in the spirit of Jones in the Fast Lane (Sierra, 1990). Walk a generated city - your flat, two schools, an employment office, two employers, a supermarket, a department store, a bank - and build up wealth, education, happiness and career within a limited number of weeks, against an AI rival that plays the same city by the same rules. Every week rotates: which vacancies are open, which school teaches, where the queues are, and how prices and wages move, so there is no single memorised route. Plus a seeded daily challenge that is the same city for everyone, statistics, a daily streak and earnable coins. Pure Kotlin on the Android framework only: no ads, no tracking, no third-party libraries. The interface is in Dutch.",
       "license": "Proprietary",
       "categories": ["Games"],
-      "added": 1785275885000,
-      "lastUpdated": 1785275885000,
+      "added": 1785345098000,
+      "lastUpdated": 1785345098000,
       "suggestedVersionName": "1.1",
       "suggestedVersionCode": "2"
     },
@@ -28,20 +28,20 @@
       "description": "A tiny, native Android word game: a wheel of letters at the bottom, a crossword grid at the top. Every word in a level can be spelled from one base word - swipe across the wheel to spell it and the grid fills in. Valid words that are not in the grid count as bonus words and pay coins, which buy hints. Dutch word lists with offline definitions, a seeded daily puzzle that is the same for everyone, plus free play, statistics and a daily streak. Pure Kotlin on the Android framework only: no ads, no tracking, no third-party libraries.",
       "license": "Proprietary",
       "categories": ["Games"],
-      "added": 1785275885000,
-      "lastUpdated": 1785275885000,
+      "added": 1785345098000,
+      "lastUpdated": 1785345098000,
       "suggestedVersionName": "1.1",
       "suggestedVersionCode": "2"
     },
     {
       "packageName": "com.hrbons.wordguesser",
       "name": "Word Guesser",
-      "summary": "Tiny native Wordle-style word game",
-      "description": "A tiny, native Android word-guessing game (Wordle-style) in pure Kotlin.",
-      "license": "MIT",
+      "summary": "Tiny native word-guessing game",
+      "description": "A tiny, native Android word-guessing game in pure Kotlin — 17 languages, word length 4-8, daily puzzle, duels.",
+      "license": "Proprietary",
       "categories": ["Games"],
-      "added": 1785275885000,
-      "lastUpdated": 1785275885000,
+      "added": 1785345098000,
+      "lastUpdated": 1785345098000,
       "suggestedVersionName": "2.3",
       "suggestedVersionCode": "5"
     },
@@ -52,8 +52,8 @@
       "description": "A tiny, native Android crossword game: an interlocking Dutch crossword in which every clue is the answer's own dictionary definition, with the answer itself masked out. Free play offers three puzzle sizes, and a seeded daily puzzle gives everyone the same grid on the same day, alongside statistics and a daily streak. Every puzzle sits on a procedurally drawn scene derived from its seed, so the game ships no image assets at all. The grid is published to screen readers as a virtual view tree, so it can be played with TalkBack. Dutch word lists with offline definitions (Dutch Wiktionary, CC BY-SA 3.0). Pure Kotlin on the Android framework only: no ads, no tracking, no third-party libraries. The puzzles and the interface are in Dutch.",
       "license": "Proprietary",
       "categories": ["Games"],
-      "added": 1785275885000,
-      "lastUpdated": 1785275885000,
+      "added": 1785345098000,
+      "lastUpdated": 1785345098000,
       "suggestedVersionName": "1.0",
       "suggestedVersionCode": "1"
     }
@@ -73,7 +73,7 @@
         "sig": "8b6fe5c42bda938c35515047937c84c4",
         "signer": "92f9654b2914bf2d882ecbc8bb5a6b6bef0a40e44838f9b9b07432ac2d6305a0",
         "uses-permission": [ ["android.permission.INTERNET", null] ],
-        "added": 1785275885000
+        "added": 1785345098000
       },      {
         "packageName": "com.hrbons.fastlane",
         "apkName": "com.hrbons.fastlane_2.apk",
@@ -87,7 +87,7 @@
         "sig": "8b6fe5c42bda938c35515047937c84c4",
         "signer": "92f9654b2914bf2d882ecbc8bb5a6b6bef0a40e44838f9b9b07432ac2d6305a0",
         "uses-permission": [ ["android.permission.INTERNET", null] ],
-        "added": 1785275885000
+        "added": 1785345098000
       }
     ],
     "com.hrbons.wordfinder": [
@@ -104,7 +104,7 @@
         "sig": "ab944fb8e45eec1b08e6473a52613f7f",
         "signer": "c36d16fa6a57a037f1f640322ac6b8c17b96500dab175c49bc63f2186c5777cd",
         "uses-permission": [ ["android.permission.INTERNET", null], ["android.permission.ACCESS_NETWORK_STATE", null] ],
-        "added": 1785275885000
+        "added": 1785345098000
       },      {
         "packageName": "com.hrbons.wordfinder",
         "apkName": "com.hrbons.wordfinder_2.apk",
@@ -118,7 +118,7 @@
         "sig": "ab944fb8e45eec1b08e6473a52613f7f",
         "signer": "c36d16fa6a57a037f1f640322ac6b8c17b96500dab175c49bc63f2186c5777cd",
         "uses-permission": [ ["android.permission.INTERNET", null], ["android.permission.ACCESS_NETWORK_STATE", null] ],
-        "added": 1785275885000
+        "added": 1785345098000
       }
     ],
     "com.hrbons.wordguesser": [
@@ -135,7 +135,7 @@
         "sig": "066a8bfbdea56d46c224f114a002091d",
         "signer": "f6787964f8e619e59185360034df1ad16de88e13f94a61539e348761cf0e7d63",
         "uses-permission": [ ["android.permission.INTERNET", null] ],
-        "added": 1785275885000
+        "added": 1785345098000
       },      {
         "packageName": "com.hrbons.wordguesser",
         "apkName": "com.hrbons.wordguesser_2.apk",
@@ -149,7 +149,7 @@
         "sig": "066a8bfbdea56d46c224f114a002091d",
         "signer": "f6787964f8e619e59185360034df1ad16de88e13f94a61539e348761cf0e7d63",
         "uses-permission": [ ["android.permission.INTERNET", null] ],
-        "added": 1785275885000
+        "added": 1785345098000
       },      {
         "packageName": "com.hrbons.wordguesser",
         "apkName": "com.hrbons.wordguesser_3.apk",
@@ -163,7 +163,7 @@
         "sig": "066a8bfbdea56d46c224f114a002091d",
         "signer": "f6787964f8e619e59185360034df1ad16de88e13f94a61539e348761cf0e7d63",
         "uses-permission": [ ["android.permission.INTERNET", null] ],
-        "added": 1785275885000
+        "added": 1785345098000
       },      {
         "packageName": "com.hrbons.wordguesser",
         "apkName": "com.hrbons.wordguesser_4.apk",
@@ -177,7 +177,7 @@
         "sig": "066a8bfbdea56d46c224f114a002091d",
         "signer": "f6787964f8e619e59185360034df1ad16de88e13f94a61539e348761cf0e7d63",
         "uses-permission": [ ["android.permission.INTERNET", null] ],
-        "added": 1785275885000
+        "added": 1785345098000
       },      {
         "packageName": "com.hrbons.wordguesser",
         "apkName": "com.hrbons.wordguesser_5.apk",
@@ -191,7 +191,7 @@
         "sig": "066a8bfbdea56d46c224f114a002091d",
         "signer": "f6787964f8e619e59185360034df1ad16de88e13f94a61539e348761cf0e7d63",
         "uses-permission": [ ["android.permission.INTERNET", null] ],
-        "added": 1785275885000
+        "added": 1785345098000
       }
     ],
     "com.hrbons.wordpuzzle": [
@@ -208,7 +208,7 @@
         "sig": "af01a4d6ac30e3154448b7214ff829d7",
         "signer": "2405a10d352440379a8891829f02be7cb126d1556cd73392938ba9fea2add8ca",
         "uses-permission": [ ["android.permission.INTERNET", null], ["android.permission.ACCESS_NETWORK_STATE", null] ],
-        "added": 1785275885000
+        "added": 1785345098000
       }
     ]
   }
