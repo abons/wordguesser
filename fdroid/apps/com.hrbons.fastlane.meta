@@ -11,8 +11,14 @@
 # (wordguesser was the one exception — MIT, because abons/wordguesser-src really was public. As of
 # 2026-07-29 there is no exception left: that repo is private, its LICENSE file is gone and its meta
 # says Proprietary too. All four now match.)
+#
+# ⚠️ SUMMARY no longer names Jones in the Fast Lane (2026-07-30, user). The line is the app's label
+# in every F-Droid client, and there another game's trademark reads as a category rather than as
+# credit. The homage itself is not the problem and stays: DESCRIPTION opens with it, attributed
+# (Sierra, 1990). Same call as wordguesser dropping "Wordle-style" — see that project's
+# CLAUDE.md → Standing decisions. Don't put the name back in SUMMARY.
 NAME="Fast Lane"
-SUMMARY="Life-simulation in the spirit of Jones in the Fast Lane - Dutch, tiny, native, offline"
+SUMMARY="Life-simulation: build wealth, education and a career - Dutch, tiny, native, offline"
 DESCRIPTION="A tiny, native Android life-simulation in the spirit of Jones in the Fast Lane (Sierra, 1990). Walk a generated city - your flat, two schools, an employment office, two employers, a supermarket, a department store, a bank - and build up wealth, education, happiness and career within a limited number of weeks, against an AI rival that plays the same city by the same rules. Every week rotates: which vacancies are open, which school teaches, where the queues are, and how prices and wages move, so there is no single memorised route. Plus a seeded daily challenge that is the same city for everyone, statistics, a daily streak and earnable coins. Pure Kotlin on the Android framework only: no ads, no tracking, no third-party libraries. The interface is in Dutch."
 LICENSE="Proprietary"
 CATEGORIES='["Games"]'
