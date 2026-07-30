@@ -8,7 +8,9 @@ Two separate repos, on purpose:
 | **dist** (just this `dist/` folder) | **public** | landing page + signed APK + F-Droid index | public download + F-Droid updates |
 
 Keeping them split means the app stays **publicly downloadable** without making your
-source (which embeds the dreamlo write-key) public.
+source public. (Until v2.4 the source also embedded the dreamlo leaderboard write-key, which made
+the split load-bearing; the leaderboard now authorises with server-side database rules, so keeping
+source private is a business choice rather than a secrecy requirement.)
 
 > `gh` (GitHub CLI) is not installed here and login is interactive, so run these
 > yourself. Install once: `winget install GitHub.cli`, then `gh auth login`.

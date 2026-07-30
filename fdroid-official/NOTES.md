@@ -13,9 +13,10 @@
 > and `../fdroid/apps/com.hrbons.wordguesser.meta` says `Proprietary`. The prerequisite in point 1
 > below is therefore deliberately unmet.
 >
-> ⚠️ One thing did **not** get undone by going private: the dreamlo write key in `Leaderboard.kt`
-> was publicly readable while the repo was open. It needs rotating — that is an open point in
-> `todo.md`, not something this folder fixes.
+> ⚠️ One thing was **not** undone by going private: the dreamlo write key in `Leaderboard.kt` was
+> publicly readable while the repo was open. Fixed in v2.4, but not by rotating — the leaderboard
+> moved to the Firebase RTDB, which authorises with server-side rules, so the app carries no key at
+> all any more. Nothing in this folder was involved either way.
 >
 > **Distribution is unaffected.** The self-hosted repo in `../fdroid/`, the landing page and the
 > word lists all serve prebuilt APKs and data out of this public `dist/` repo; none of them read
@@ -32,8 +33,9 @@ self-hosted repo in `../fdroid/` — here F-Droid's own build servers compile th
 1. **Public source repo with a git tag.** Official F-Droid builds from source, so the
    source repo must be **public** and have a tag matching the version, e.g. `v1.0`
    (the metadata's `commit: v1.0`). This conflicts with keeping source private — decide
-   before submitting. Note: making source public also exposes the dreamlo write-key
-   embedded in `Leaderboard.kt` (already extractable from the APK, but this makes it plain).
+   before submitting. (This used to carry a second cost — the dreamlo write key embedded in
+   `Leaderboard.kt` — but since v2.4 the leaderboard authorises with server-side database rules
+   and there is no key in the source to expose.)
 
 2. **A real FOSS license + LICENSE file.** F-Droid only accepts OSI/FSF-approved licenses.
    The metadata currently says `License: MIT` as a **placeholder** — pick a license you're
