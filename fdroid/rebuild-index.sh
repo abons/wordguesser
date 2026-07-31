@@ -150,6 +150,13 @@ JSON
 cd "$REPO"
 rm -f index-v1.jar
 "$JAVA_HOME/bin/jar.exe" cf index-v1.jar index-v1.json 2>/dev/null || jar cf index-v1.jar index-v1.json
+# -digestalg SHA1 is NOT an oversight (2026-07-31). With SHA-256 the official F-Droid client
+# refuses the repo outright, in Settings > additional repositories:
+#   "Foute vingerafdruk / org.fdroid.index.signingException: Unsupported digest: SHA-256-Digest"
+# Its index-v1 verifier only knows SHA1-Digest in the JAR manifest -- F-Droid signs its own index
+# with SHA1withRSA and has an open issue to move up (fdroidclient#1989). The SIGNATURE stays
+# SHA256withRSA, only the per-entry manifest digest is SHA1, and the signing cert is untouched, so
+# the repo fingerprint in the add-URL does not change. Revisit when F-Droid accepts SHA-256.
 jarsigner -keystore "$KS" -storepass "$KSPASS" -keypass "$KSPASS" \
-  -digestalg SHA-256 -sigalg SHA256withRSA index-v1.jar "$ALIAS" >/dev/null
+  -digestalg SHA1 -sigalg SHA256withRSA index-v1.jar "$ALIAS" >/dev/null
 jarsigner -verify index-v1.jar | grep -i 'jar verified' && echo "OK: index-v1.jar signed"
