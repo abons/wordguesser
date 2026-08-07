@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Word Guesser — tiny native word-guessing game for Android</title>
-<meta name="description" content="Download Word Guesser: a tiny (~102 KB), native, ad-free word-guessing game for Android. 17 languages, word length 4–8, daily puzzles, leaderboard, timed mode and duels. Get it directly or via F-Droid.">
-<meta name="keywords" content="Word Guesser, word guessing game, daily word puzzle, Android word game, 17 languages, F-Droid, ad-free, no tracking, Nederlands, woordspel, native, lightweight APK">
+<meta name="description" content="Download Word Guesser: a tiny (~102 KB), native, ad-free word-guessing game for Android. 17 languages, word length 4–8, daily puzzles, leaderboard, timed mode and duels. Download it straight from the page.">
+<meta name="keywords" content="Word Guesser, word guessing game, daily word puzzle, Android word game, 17 languages, ad-free, no tracking, Nederlands, woordspel, native, lightweight APK">
 <meta name="author" content="hrbons">
 <meta name="google-site-verification" content="B81phBCY0u5E3xFZ7Vp7M6JqVuyCbMqDldoJch3vFNI">
 <meta name="theme-color" content="#16a34a">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Word Guesser">
 <meta property="og:title" content="Word Guesser — tiny native word-guessing game for Android">
-<meta property="og:description" content="A tiny (~102 KB), native, ad-free word-guessing game. 17 languages, daily puzzles, leaderboard, timed mode and duels. Direct download or via F-Droid.">
+<meta property="og:description" content="A tiny (~102 KB), native, ad-free word-guessing game. 17 languages, daily puzzles, leaderboard, timed mode and duels. Direct download, no store needed.">
 <meta property="og:url" content="https://abons.github.io/wordguesser/">
 <meta property="og:image" content="https://abons.github.io/wordguesser/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -23,7 +23,7 @@
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Word Guesser — tiny native word-guessing game for Android">
-<meta name="twitter:description" content="A tiny (~102 KB), native, ad-free word-guessing game. 17 languages, daily puzzles, duels. Direct download or via F-Droid.">
+<meta name="twitter:description" content="A tiny (~102 KB), native, ad-free word-guessing game. 17 languages, daily puzzles, duels. Direct download, no store needed.">
 <meta name="twitter:image" content="https://abons.github.io/wordguesser/assets/og.png">
 <script type="application/ld+json">
 {
@@ -34,7 +34,7 @@
   "applicationCategory": "GameApplication",
   "description": "A tiny, native word-guessing game for Android in pure Kotlin. 17 downloadable languages, variable word length 4–8, strict/hard modes, daily puzzles per length with a public leaderboard, timed mode and duels against the computer or another player.",
   "url": "https://abons.github.io/wordguesser/",
-  "downloadUrl": "https://abons.github.io/wordguesser/fdroid/repo/com.hrbons.wordguesser_8.apk",
+  "downloadUrl": "https://abons.github.io/wordguesser/apk/com.hrbons.wordguesser_8.apk",
   "softwareVersion": "2.6",
   "fileSize": "102KB",
   "author": { "@type": "Person", "name": "hrbons" },
@@ -60,19 +60,8 @@
     display: inline-block; background: #16a34a; color: #fff; text-decoration: none;
     font-weight: 600; padding: 14px 22px; border-radius: 10px; font-size: 1.05rem;
   }
-  a.btn.alt { background: #2563eb; }
   .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
   code, .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .82rem; }
-  .field {
-    display: flex; gap: 8px; margin-top: 10px;
-  }
-  .field input {
-    flex: 1; min-width: 0; padding: 10px 12px; border: 1px solid #ccc; border-radius: 8px;
-    font-family: ui-monospace, monospace; font-size: .8rem; background: #f6f6f6; color: #111;
-  }
-  .field button {
-    padding: 10px 14px; border: 1px solid #ccc; border-radius: 8px; background: #eee; cursor: pointer; font-weight: 600;
-  }
   ol { padding-left: 1.2em; } li { margin: .3em 0; }
   ul.games { list-style: none; margin: 0; padding: 0; }
   ul.games li { display: flex; flex-wrap: wrap; gap: 10px; align-items: baseline; margin: .55em 0; }
@@ -95,8 +84,6 @@
     .tag, .meta, footer { color: #9a9a9a; }
     .card { background: #1c1c1c; border-color: #2c2c2c; }
     .shot { border-color: #2c2c2c; }
-    .field input { background: #262626; border-color: #3a3a3a; color: #e8e8e8; }
-    .field button { background: #2c2c2c; border-color: #3a3a3a; color: #e8e8e8; }
     .meta b { color: #ccc; }
     ul.games .d { color: #9a9a9a; }
     .pill { background: #14361f; color: #7fd4a0; }
@@ -117,39 +104,18 @@
   <div class="card">
     <h2>Download</h2>
     <div class="row">
-      <a class="btn" id="apk" href="fdroid/repo/com.hrbons.wordguesser_8.apk" download>Download APK (v2.6)</a>
+      <a class="btn" id="apk" href="apk/com.hrbons.wordguesser_8.apk" download>Download APK (v2.6)</a>
     </div>
     <p class="meta">You may need to allow "install unknown apps" for your browser. Verify integrity if you like:<br>
       <b>SHA-256:</b> <span class="mono">73679ad7dce400a019a07a481b66b839f0b9fdb57367c526bc08b3d2abf63219</span></p>
   </div>
 
   <div class="card">
-    <h2>Get updates via F-Droid</h2>
-    <p>Add this repository in the <a href="https://f-droid.org/" >F-Droid</a> app and you'll get future versions automatically.</p>
-    <div class="row" style="margin:12px 0">
-      <a class="btn alt" id="fdroidlink" href="#">Add to F-Droid</a>
-    </div>
-    <p style="margin:.4em 0 0">Or add it manually — repository address:</p>
-    <div class="field">
-      <input id="repourl" readonly value="">
-      <button data-copy="repourl">Copy</button>
-    </div>
-    <p style="margin:1em 0 .2em">Fingerprint (verify this matches in F-Droid):</p>
-    <div class="field">
-      <input id="fp" readonly value="C74E4BC48DBE3CCF800A859BC5A9118B23A19BA38C8B33573DBA1BDEB7E456EE">
-      <button data-copy="fp">Copy</button>
-    </div>
-  </div>
-
-  <div class="card">
-    <h2>How to add manually in F-Droid</h2>
-    <ol>
-      <li>Install the <a href="https://f-droid.org/">F-Droid</a> client.</li>
-      <li>Go to <b>Settings → Repositories → +</b> (add).</li>
-      <li>Paste the repository address above.</li>
-      <li>Confirm the fingerprint matches, then enable the repo.</li>
-      <li>Search for <b>Word Guesser</b> and install.</li>
-    </ol>
+    <h2>Getting updates</h2>
+    <p>There is no update channel: this page always has the newest version, so check back here or
+      watch the <a href="https://github.com/abons/wordguesser/releases">releases</a> page. Installing a
+      new APK over an old one keeps your statistics and coins — every version is signed with the same
+      key.</p>
   </div>
 
   <div class="card">
@@ -161,20 +127,20 @@
         <a class="pill repo" href="https://github.com/abons/wordguesser/releases">releases</a>
         <span class="d">Guess the word from colour clues; 17 languages, daily puzzle, duels.</span></li>
       <li><span class="n">Word Swipe</span>
-        <a class="pill" href="fdroid/repo/com.hrbons.wordfinder_2.apk" download>v1.1 — download APK</a>
+        <a class="pill" href="apk/com.hrbons.wordfinder_2.apk" download>v1.1 — download APK</a>
         <a class="pill repo" href="https://github.com/abons/wordfinder/releases">releases</a>
         <span class="d">Swipe letters on a wheel to fill a crossword; bonus words pay for hints.</span></li>
       <li><span class="n">Word Cross</span>
-        <a class="pill" href="fdroid/repo/com.hrbons.wordpuzzle_1.apk" download>v1.0 — download APK</a>
+        <a class="pill" href="apk/com.hrbons.wordpuzzle_1.apk" download>v1.0 — download APK</a>
         <a class="pill repo" href="https://github.com/abons/wordpuzzle/releases">releases</a>
         <span class="d">Crossword puzzles built from Dutch words and their definitions.</span></li>
       <li><span class="n">Fast Lane</span>
-        <a class="pill" href="fdroid/repo/com.hrbons.fastlane_2.apk" download>v1.1 — download APK</a>
+        <a class="pill" href="apk/com.hrbons.fastlane_2.apk" download>v1.1 — download APK</a>
         <a class="pill repo" href="https://github.com/abons/fastlane/releases">releases</a>
         <span class="d">A life-simulation: work, study, shop and climb the career ladder against an AI rival — Dutch interface.</span></li>
     </ul>
-    <p class="meta">The F-Droid repository above is shared by all of them, so once a game is
-      released it shows up in F-Droid without adding anything new.</p>
+    <p class="meta">Each game is a single APK — download it here or from its releases page. They
+      install alongside each other and share nothing at runtime.</p>
   </div>
 
   <footer>
@@ -182,21 +148,5 @@
   </footer>
 </main>
 
-<script>
-  // Build the repo URLs from wherever this page is actually hosted, so nothing needs editing.
-  var base = location.origin + location.pathname.replace(/\/index\.html$/, "").replace(/\/$/, "");
-  var repoUrl = base + "/fdroid/repo";
-  var fp = document.getElementById("fp").value;
-  document.getElementById("repourl").value = repoUrl;
-  var addUrl = repoUrl + "?fingerprint=" + fp;
-  document.getElementById("fdroidlink").href = "fdroidrepos://" + repoUrl.replace(/^https?:\/\//, "") + "?fingerprint=" + fp;
-  document.querySelectorAll("button[data-copy]").forEach(function (b) {
-    b.addEventListener("click", function () {
-      var el = document.getElementById(b.getAttribute("data-copy"));
-      el.select(); navigator.clipboard && navigator.clipboard.writeText(el.value);
-      var t = b.textContent; b.textContent = "Copied"; setTimeout(function () { b.textContent = t; }, 1200);
-    });
-  });
-</script>
 </body>
 </html>

@@ -5,51 +5,46 @@ Two separate repos, on purpose:
 | Repo | Visibility | Contains | Purpose |
 |---|---|---|---|
 | **source** (this whole project) | **private** | Kotlin source, keystores (gitignored) | your code + backup |
-| **dist** (just this `dist/` folder) | **public** | landing page + signed APK + F-Droid index | public download + F-Droid updates |
+| **dist** (just this `dist/` folder) | **public** | landing page + signed APKs + word lists | public download |
 
 Keeping them split means the app stays **publicly downloadable** without making your
 source public. (Until v2.4 the source also embedded the dreamlo leaderboard write-key, which made
 the split load-bearing; the leaderboard now authorises with server-side database rules, so keeping
 source private is a business choice rather than a secrecy requirement.)
 
-> `gh` (GitHub CLI) is not installed here and login is interactive, so run these
-> yourself. Install once: `winget install GitHub.cli`, then `gh auth login`.
+> ⛔ **F-Droid was dropped for every app on 2026-08-07 (user's decision).** The self-hosted repo that
+> used to live in `fdroid/` — one shared URL and fingerprint for all four games — is gone, and so are
+> the prep notes for the official catalogue in `fdroid-official/` (that route was already closed on
+> 2026-07-29). The reasoning for both is kept in the source repo's `design.md`. What follows is the
+> flow that replaced it: a page with an APK on it. The `fdroid-repo.keystore` is no longer used by
+> anything; **`release.keystore` is still the app signing key and still must never be lost.**
 
 ---
 
 ## 1. Public dist repo → GitHub Pages (findable + downloadable)
 
-From the project root:
+Already set up and live at <https://abons.github.io/wordguesser/>. For a fresh host, from the
+project root:
 
 ```bash
-# make a clean folder that will become the PUBLIC repo (only dist/ contents)
 cd dist
 git init -b main
 git add .
-git commit -m "Word Guesser 1.0 — site + F-Droid repo"
+git commit -m "Word Guesser — site + APK"
 gh repo create wordguesser --public --source=. --push
 # enable GitHub Pages on the default branch, root folder:
 gh api -X POST repos/{owner}/wordguesser/pages -f source.branch=main -f source.path=/ 2>/dev/null || \
   echo "Enable Pages manually: repo Settings -> Pages -> Deploy from branch: main / (root)"
 ```
 
-After Pages goes live (~1 min) you get a public site, e.g.
-`https://<you>.github.io/wordguesser/`
-
-- **Direct APK download:** `https://<you>.github.io/wordguesser/fdroid/repo/com.hrbons.wordguesser_1.apk`
-- **F-Droid repo URL** (auto-shown on the landing page): `https://<you>.github.io/wordguesser/fdroid/repo`
-- **Fingerprint:** `C74E4BC48DBE3CCF800A859BC5A9118B23A19BA38C8B33573DBA1BDEB7E456EE`
-
-The landing page (`index.html`) builds the F-Droid add-URL from wherever it's hosted,
-so there's nothing to edit. (Optional: set the real URL in `fdroid/repo/index-v1.json`
-`address` field and re-run `fdroid/rebuild-index.sh` — cosmetic only.)
+- **Direct APK download:** `https://<you>.github.io/wordguesser/apk/com.hrbons.wordguesser_<versionCode>.apk`
+- Only the **current** APK of each game is hosted. Older builds stay in this repo's git history and,
+  from v2.3 on, as GitHub release assets.
 
 Any static host works too (Netlify, Cloudflare Pages, your own server): just serve the
-`dist/` folder.
+`dist/` folder. Nothing on the page is generated at request time.
 
 ## 2. Private source repo (backup + versioning)
-
-From the project root:
 
 ```bash
 git init -b main
@@ -70,14 +65,13 @@ published — never a rebuild, or two different sets of bytes end up under one v
 
 ```bash
 cd dist
-gh release create v2.3 fdroid/repo/com.hrbons.wordguesser_5.apk \
+gh release create v2.6 apk/com.hrbons.wordguesser_8.apk \
   --target "$(git rev-parse HEAD)" \
-  -t "Word Guesser 2.3 — the scenic-backdrop release" --notes-file notes.md
+  -t "Word Guesser 2.6" --notes-file notes.md
 ```
 
-`--target` needs a branch name or a **full** SHA; a short one fails with HTTP 422. The APK stays
-a tracked file in `fdroid/repo/` as well — this repo is also the F-Droid host, so it can't move
-the bytes into releases the way the sibling repos do.
+`--target` needs a branch name or a **full** SHA; a short one fails with HTTP 422. The APK is also a
+tracked file in `apk/`, because that is what the landing page links to.
 
 ---
 
@@ -85,26 +79,20 @@ the bytes into releases the way the sibling repos do.
 
 1. Bump `versionCode` (and `versionName`) in `app/build.gradle`.
 2. `install-release.bat` (or `gradlew.bat assembleRelease`) — same keystore.
-3. Copy the new APK into `dist/fdroid/repo/` as `com.hrbons.wordguesser_<versionCode>.apk`
-   (keep the old one so users on older Android still resolve a version).
-4. Run `bash dist/fdroid/rebuild-index.sh` to regenerate + re-sign the index.
-5. Commit & push the dist repo. F-Droid clients pick up the update automatically.
+3. Copy the new APK into `dist/apk/` as `com.hrbons.wordguesser_<versionCode>.apk`, and
+   `git rm` the previous one — the page links exactly one per game.
+4. Update `index.html`: the download button, the JSON-LD `downloadUrl` + `softwareVersion`, the
+   SHA-256, the pill in the games list, and the size **only if the rounded KB actually moved**
+   (it appears five times, one of them with `&nbsp;` — grep the bare number).
+5. Commit & push the dist repo, tag it, and attach the APK to a GitHub release.
+6. Verify against the live host, not your local files: fetch the APK from Pages and hash it.
 
-## Adding another app to the same repo
+## Adding another app to the page
 
-The F-Droid repo is deliberately shared by all hrbons apps — one URL, one fingerprint, one
-`fdroid-repo.keystore` — so existing subscribers get a new app automatically instead of
-having to add a second repo.
+1. Drop the signed APK into `apk/` as `<packageName>_<versionCode>.apk`.
+2. Add a row to the games list in `index.html` with a download pill and a releases link.
+3. Commit & push the dist repo.
 
-1. Write `fdroid/apps/<packageName>.meta` (name, summary, description, license, categories).
-   It is sourced by `rebuild-index.sh`; a missing file is a hard error, so no app can be
-   published nameless. Everything else — version, size, hash, signer, SDK levels,
-   permissions — is read from the APK, so the index cannot disagree with the release.
-2. Drop the signed APK into `fdroid/repo/` as `<packageName>_<versionCode>.apk`.
-3. `bash fdroid/rebuild-index.sh` — APKs are grouped by the package name from the APK, and
-   each app gets its own version list and its own `suggestedVersionCode`.
-4. Add the app to the landing page, then commit & push the dist repo.
-
-**Never delete or lose** `fdroid-repo.keystore` (repo index signing) or `release.keystore`
-(app signing) — both live outside every repo (path in `local.properties`) and are required
-for updates to be trusted.
+**Never delete or lose `release.keystore`** (app signing; path in `local.properties`, outside every
+repo) — without it no future build can update an installed app, because Android refuses an update
+signed by a different key.

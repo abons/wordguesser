@@ -1,13 +1,13 @@
 # 🟩 Word Guesser
 
 **A tiny, native word-guessing game for Android** — pure Kotlin, no ads, no trackers,
-~72&nbsp;KB. Guess the hidden word in six tries.
+~102&nbsp;KB. Guess the hidden word in six tries.
 
-### ▶️ [**Download / F-Droid → abons.github.io/wordguesser**](https://abons.github.io/wordguesser/)
+### ▶️ [**Download → abons.github.io/wordguesser**](https://abons.github.io/wordguesser/)
 
-[![APK](https://img.shields.io/badge/download-APK%20v1.0-16a34a)](https://abons.github.io/wordguesser/fdroid/repo/com.hrbons.wordguesser_1.apk)
-[![F-Droid repo](https://img.shields.io/badge/F--Droid-add%20repo-1976d2)](https://abons.github.io/wordguesser/)
-![size](https://img.shields.io/badge/APK-~72%20KB-brightgreen)
+[![APK](https://img.shields.io/badge/download-APK%20v2.6-16a34a)](https://abons.github.io/wordguesser/apk/com.hrbons.wordguesser_8.apk)
+[![releases](https://img.shields.io/badge/all-releases-3f5163)](https://github.com/abons/wordguesser/releases)
+![size](https://img.shields.io/badge/APK-~102%20KB-brightgreen)
 ![Android](https://img.shields.io/badge/Android-5.0%2B-3ddc84)
 ![no ads](https://img.shields.io/badge/ads-none-black)
 
@@ -17,17 +17,12 @@
 
 ## Install
 
-**Direct APK** — [download it](https://abons.github.io/wordguesser/fdroid/repo/com.hrbons.wordguesser_1.apk)
+**Direct APK** — [download it](https://abons.github.io/wordguesser/apk/com.hrbons.wordguesser_8.apk)
 and open it (you may need to allow "install unknown apps" for your browser).
 
-**Via F-Droid (recommended — gets updates automatically):** add this repository in the
-[F-Droid](https://f-droid.org/) client (*Settings → Repositories → +*):
-
-```
-https://abons.github.io/wordguesser/fdroid/repo?fingerprint=C74E4BC48DBE3CCF800A859BC5A9118B23A19BA38C8B33573DBA1BDEB7E456EE
-```
-
-Then search for **Word Guesser** and install. Updates arrive automatically.
+There is no update channel: this page always carries the newest build, and every release is also
+attached to the [releases page](https://github.com/abons/wordguesser/releases). A new APK installs
+straight over an older one and keeps your statistics and coins — all versions share one signing key.
 
 ## Features
 
@@ -47,14 +42,14 @@ Then search for **Word Guesser** and install. Updates arrive automatically.
 
 It's written in **pure Kotlin on the Android framework only** — no AppCompat, Compose,
 Material, or third-party runtime libraries. The whole UI is built in code, and word lists
-live online instead of being bundled. Result: a ~72&nbsp;KB APK that runs on Android 5.0+.
+live online instead of being bundled. Result: a ~102&nbsp;KB APK that runs on Android 5.0+.
 
 ## Verify the download
 
-APK SHA-256:
+APK SHA-256 (v2.6):
 
 ```
-1b92ade12b437931267abd73baeba2983a9330a95bdcb4c4ddd8098fa4cef74f
+73679ad7dce400a019a07a481b66b839f0b9fdb57367c526bc08b3d2abf63219
 ```
 
 ## Privacy
@@ -69,7 +64,7 @@ If you enjoy it, you can [☕ support the developer on Ko-fi](https://ko-fi.com/
 
 ---
 
-*This repository hosts the public download page, a self-hosted F-Droid repository, and the
+*This repository hosts the public download page, the APKs it links to, and the
 word lists the app downloads at runtime. The app is signed by CN=hrbons. The lists are ©
 their respective authors and are mirrored here as filtered derivatives, each under its own
 upstream licence — see [`wordlists/SOURCES.md`](wordlists/SOURCES.md) for the full
