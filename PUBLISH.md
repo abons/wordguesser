@@ -1,5 +1,13 @@
 # Publishing Word Guesser
 
+> 🛑 **Obsolete as of 2026-08-16.** All four games had their APKs removed from public GitHub — from
+> the release assets and from `apk/` on the landing page — and Google Play becomes the only channel.
+> Nothing below that copies an APK into `apk/` or attaches one to a release should be carried out any
+> more. The signed builds still exist: each `<game>-src` release carries an archive copy, and for
+> Word Guesser those copies were created on that same date (`v2.3`–`v2.6`), because until then the
+> public release was the only place its APKs lived. The rest of this file is kept as the record of
+> how the direct-download setup worked.
+
 Two separate repos, on purpose:
 
 | Repo | Visibility | Contains | Purpose |

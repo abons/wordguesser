@@ -3,9 +3,8 @@
 **A tiny, native word-guessing game for Android** — pure Kotlin, no ads, no trackers,
 ~102&nbsp;KB. Guess the hidden word in six tries.
 
-### ▶️ [**Download → abons.github.io/wordguesser**](https://abons.github.io/wordguesser/)
+### ▶️ [**abons.github.io/wordguesser**](https://abons.github.io/wordguesser/)
 
-[![APK](https://img.shields.io/badge/download-APK%20v2.6-16a34a)](https://abons.github.io/wordguesser/apk/com.hrbons.wordguesser_8.apk)
 [![releases](https://img.shields.io/badge/all-releases-3f5163)](https://github.com/abons/wordguesser/releases)
 ![size](https://img.shields.io/badge/APK-~102%20KB-brightgreen)
 ![Android](https://img.shields.io/badge/Android-5.0%2B-3ddc84)
@@ -15,14 +14,19 @@
   <img src="assets/screenshot.png" alt="Word Guesser gameplay showing green, yellow and gray letter tiles" width="260">
 </p>
 
-## Install
+## Where to get it
 
-**Direct APK** — [download it](https://abons.github.io/wordguesser/apk/com.hrbons.wordguesser_8.apk)
-and open it (you may need to allow "install unknown apps" for your browser).
+**Word Guesser is moving to Google Play, and there is no download here.** The APKs that used to hang
+on the [releases page](https://github.com/abons/wordguesser/releases) were taken down on 2026-08-16,
+and the landing page no longer serves one either. Until the Play listing is live there is no way to
+install the game for the first time.
 
-There is no update channel: this page always carries the newest build, and every release is also
-attached to the [releases page](https://github.com/abons/wordguesser/releases). A new APK installs
-straight over an older one and keeps your statistics and coins — all versions share one signing key.
+If you already have it, keep it — it works offline and nothing about it expires. One thing to know
+about the move: the Play version will be signed by Google rather than by the key that signed your
+copy, so it will **not** install over what you have. Getting the Play version later means removing
+this one first, and your statistics and coins do not survive that.
+
+The release notes stay as the record of what changed per version.
 
 ## Features
 
