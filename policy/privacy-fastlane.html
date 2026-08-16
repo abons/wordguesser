@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fast Lane — privacy policy</title>
+<meta name="description" content="What the Fast Lane Android app stores, what it sends, and to whom. No accounts, no ads, no trackers, no analytics, and no names on the network.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://abons.github.io/wordguesser/policy/privacy-fastlane.html">
+<meta name="theme-color" content="#14181F">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2314181F'/%3E%3Ctext x='50' y='73' font-size='62' font-family='sans-serif' font-weight='bold' fill='%23E7B93B' text-anchor='middle'%3EF%3C/text%3E%3C/svg%3E">
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    line-height: 1.6; color: #111; background: #fafafa;
+    display: flex; justify-content: center; padding: 24px;
+  }
+  main { width: 100%; max-width: 640px; }
+  h1 { font-size: 1.7rem; margin: .2em 0 .1em; }
+  .tag { color: #666; margin: 0 0 1.4em; }
+  .card { background: #fff; border: 1px solid #e3e3e3; border-radius: 14px; padding: 20px 22px; margin: 16px 0; }
+  h2 { font-size: 1.05rem; margin: 0 0 .6em; }
+  ul { padding-left: 1.2em; }
+  li { margin: .3em 0; }
+  a { color: #9a7410; }
+  code { background: #f0f0f0; border-radius: 4px; padding: 1px 5px; font-size: .92em; }
+  footer { color: #666; font-size: .9rem; margin: 24px 0 8px; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e9e9e9; background: #121212; }
+    .card { background: #1c1c1c; border-color: #2e2e2e; }
+    .tag, footer { color: #9b9b9b; }
+    a { color: #E7B93B; }
+    code { background: #262626; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Privacy policy</h1>
+<p class="tag">Fast Lane for Android (<code>com.hrbons.fastlane</code>)</p>
+
+<div class="card">
+  <h2>The short version</h2>
+  <p>
+    Fast Lane has <strong>no accounts, no ads, no trackers and no analytics</strong>. Nothing about you
+    is collected, profiled or sold. The game is played entirely on your own device, and it uses the
+    network for exactly one thing: an online duel against another player, which only happens if you
+    start one. It never asks for your name, and it has nowhere to put one.
+  </p>
+</div>
+
+<div class="card">
+  <h2>What stays on your device</h2>
+  <p>
+    Your two saved games, your statistics, your coin balance and your settings — the sound switch and
+    small interface state, such as whether you collapsed the status bar — live in the app's own
+    preferences files on the device. They never leave it on their own, and uninstalling the app
+    deletes them. The game has no language setting: it simply follows the language your phone is set
+    to, and that choice is never recorded anywhere.
+  </p>
+  <p>
+    The app allows Android's own backup, so a device backup you have enabled with Google can include
+    your save and your statistics; that is what carries a game in progress to a new phone. That backup
+    is governed by Google's terms, not by this app, and you can switch it off in Android's settings.
+  </p>
+  <p>
+    <strong>One thing is deliberately kept out of that backup: your coin balance.</strong> It sits in
+    its own file that both backup routes exclude, so restoring a backup never hands back coins that
+    were already spent.
+  </p>
+</div>
+
+<div class="card">
+  <h2>What leaves your device</h2>
+  <p>
+    Only an online duel, and only after you start or join one. Two phones share a <strong>room</strong>
+    named by a four-character code that one player reads out to the other. Through that room the app
+    exchanges:
+  </p>
+  <ul>
+    <li>the room code itself, the shared random seed, the round number and whether the room is waiting, playing or finished;</li>
+    <li>once a week of game time, each player's position in the game as plain numbers — cash, bank,
+      possessions, education, happiness, career, hunger, the job held, experience, rent tier, study
+      progress, furniture and clothing.</li>
+  </ul>
+  <p>
+    <strong>No name, no e-mail address, no device identifier and no identifier this app invented</strong>
+    ever goes into a room. There is nothing in a room that says who was playing — only how a game went.
+  </p>
+  <p>
+    The room lives in a Google Firebase Realtime Database hosted in the EU (europe-west1). Everything
+    goes over HTTPS and the app refuses plain HTTP outright. Like any web service, Firebase sees the IP
+    address the request came from.
+  </p>
+  <p>
+    <strong>A room is protected by its code and nothing else</strong>, which is the honest description
+    of a game that has no accounts: someone who knows your code could read or overwrite that room. The
+    database will not hand out a list of rooms, so codes cannot be harvested, and a room holds nothing
+    but the numbers above. The player who opened the room hands it back when they leave the duel. A
+    room whose host never leaves — a force-close, a flat battery — stays behind until it is removed by
+    hand, still holding nothing that names anyone.
+  </p>
+</div>
+
+<div class="card">
+  <h2>When the app hands you to another app</h2>
+  <p>
+    The one link in the game — the voluntary Ko-fi support link — hands you to a browser you pick. From
+    that moment Ko-fi's privacy policy applies, not this one. Fast Lane sends nothing along with it, and
+    it never opens the link without you tapping it.
+  </p>
+</div>
+
+<div class="card">
+  <h2>Children</h2>
+  <p>
+    The game is suitable for all ages, asks for no personal data, and has no chat, no profiles and no
+    public board. Two players can reach each other only by agreeing a room code somewhere else first,
+    and a room carries no text either of them can write.
+  </p>
+</div>
+
+<div class="card">
+  <h2>Deleting your data</h2>
+  <p>
+    Everything the game knows about you is on your phone, so uninstalling it removes all of it. The one
+    thing that ever leaves is a duel room, which the player who opened it hands back on leaving, and
+    which contains no name in any case. If a room was left behind and you want it gone, send its
+    four-character code to the address below and it will be removed by hand.
+  </p>
+</div>
+
+<div class="card">
+  <h2>Changes and contact</h2>
+  <p>
+    If this policy changes, the date below changes with it. Questions, or a request to remove
+    something: <a href="mailto:hr.bons@gmail.com">hr.bons@gmail.com</a>
+  </p>
+</div>
+
+<footer>
+  Last updated: 16 August 2026 · <a href="https://abons.github.io/wordguesser/">Back to the games</a>
+</footer>
+
+</main>
+</body>
+</html>
