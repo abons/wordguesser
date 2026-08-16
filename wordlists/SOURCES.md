@@ -43,6 +43,7 @@ as version 1. The next Dutch pool change becomes `nl-v2.txt` beside them.
 | Lang | File | Words | Upstream source | Author / copyright | Licence | Licence text |
 | --- | --- | --- | --- | --- | --- | --- |
 | English (large) | [en-v1.txt](en-v1.txt) | 146,606 | [dwyl/english-words](https://github.com/dwyl/english-words) | dwyl and contributors | `Unlicense` | [licenses/en-v1.txt](licenses/en-v1.txt) |
+| English *(definitions + their answer pool)* | [en-defs-v1.json](en-defs-v1.json) + [en-answers-v1.txt](en-answers-v1.txt) *(see [EN-DEFS-README.md](EN-DEFS-README.md))* | 29,662 | [Open English WordNet 2025](https://en-word.net/) | Open English WordNet contributors | `CC-BY-4.0` | [licenses/en-defs-v1.txt](licenses/en-defs-v1.txt) |
 | Nederlands | [nl.txt](nl.txt) *(+ accept list & definitions — see [NL-README.md](NL-README.md))* | see NL-README | [OpenTaal (approved base words)](https://github.com/OpenTaal/opentaal-wordlist) | Stichting OpenTaal | `CC-BY-3.0 OR BSD-3-Clause` | [upstream](https://creativecommons.org/licenses/by/3.0/) |
 | Nederlands *(ranking, not a word list)* | [nl-freq-v1.txt](nl-freq-v1.txt) *(see [NL-FREQ-README.md](NL-FREQ-README.md))* | 25,037 | [hermitdave/FrequencyWords · OpenSubtitles 2018](https://github.com/hermitdave/FrequencyWords) | Hermit Dave and contributors | `CC-BY-SA-4.0` | [upstream](https://creativecommons.org/licenses/by-sa/4.0/) |
 | Français | [fr-v1.txt](fr-v1.txt) | 91,071 | [lorenbrichter/Words](https://github.com/lorenbrichter/Words) | Loren Brichter | `CC0-1.0` | [licenses/fr-v1.txt](licenses/fr-v1.txt) |

@@ -3,3 +3,6 @@ __pycache__/
 # Intermediates from the Dutch definitions pipeline (build-nl-defs.py / augment-nl-defs.py).
 _missing-defs.txt
 words_tmp.txt
+
+# The English source dump (build-en-defs.js downloads it again when it is absent).
+english-wordnet-2025.xml.gz
