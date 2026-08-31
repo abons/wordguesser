@@ -167,6 +167,573 @@
           { "day": "20280229", "dayUtc": 21243, "word": "UIENSOEP" }
         ] }
       }
+    },
+    "fr": {
+      "source": "https://abons.github.io/wordguesser/wordlists/fr-v1.txt",
+      "salt": 3276,
+      "extra": "", "fold": true, "min": 5, "max": 8,
+      "lengths": {
+        "5": { "poolSize": 6788, "poolSha256": "0473aa41a80c670c31f6ef9b68dbf9c1791c3a36f07e3500bcf766f8fce18af3", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "TRACE" },
+          { "day": "20261231", "dayUtc": 20818, "word": "MANIE" },
+          { "day": "20270101", "dayUtc": 20819, "word": "SUINT" },
+          { "day": "20270615", "dayUtc": 20984, "word": "LÛTES" },
+          { "day": "20280229", "dayUtc": 21243, "word": "COUPA" }
+        ] },
+        "6": { "poolSize": 15699, "poolSha256": "6d1768b48abff6e5a5cafd2b2691c6acc3b4d1cfba5ffb3be72c5c9471bdfd97", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "HÂTIEZ" },
+          { "day": "20261231", "dayUtc": 20818, "word": "ÉCRASE" },
+          { "day": "20270101", "dayUtc": 20819, "word": "PIQUÉE" },
+          { "day": "20270615", "dayUtc": 20984, "word": "VANTER" },
+          { "day": "20280229", "dayUtc": 21243, "word": "STOPPE" }
+        ] },
+        "7": { "poolSize": 27878, "poolSha256": "0a90b77829df7418cecf3597b7b9c57eb8d8b83581d3d11f40f51d270cab5274", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "REPERCE" },
+          { "day": "20261231", "dayUtc": 20818, "word": "BLOQUÂT" },
+          { "day": "20270101", "dayUtc": 20819, "word": "ÉMOUCHA" },
+          { "day": "20270615", "dayUtc": 20984, "word": "PARIAIT" },
+          { "day": "20280229", "dayUtc": 21243, "word": "CALTAIS" }
+        ] },
+        "8": { "poolSize": 40665, "poolSha256": "31d2c4c10817786ea7751192cc597faec589126d2f1da6b346f56e59eb763aa3", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "BRASÂMES" },
+          { "day": "20261231", "dayUtc": 20818, "word": "PIERRENT" },
+          { "day": "20270101", "dayUtc": 20819, "word": "DOUBLAGE" },
+          { "day": "20270615", "dayUtc": 20984, "word": "RÉSORBÉE" },
+          { "day": "20280229", "dayUtc": 21243, "word": "VIRGULÂT" }
+        ] }
+      }
+    },
+    "de": {
+      "source": "https://abons.github.io/wordguesser/wordlists/de-v1.txt",
+      "salt": 3201,
+      "extra": "ß", "fold": true, "min": 4, "max": 8,
+      "lengths": {
+        "4": { "poolSize": 1760, "poolSha256": "03c65830af3900782361656482703b344de787b2ef5ae7ec6b1b6e74498379b7", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "LINS" },
+          { "day": "20261231", "dayUtc": 20818, "word": "RIEB" },
+          { "day": "20270101", "dayUtc": 20819, "word": "VALE" },
+          { "day": "20270615", "dayUtc": 20984, "word": "EGGE" },
+          { "day": "20280229", "dayUtc": 21243, "word": "RETT" }
+        ] },
+        "5": { "poolSize": 4819, "poolSha256": "3253fd4726da097fb4ff7089dd3542761bb381b88e692e8161f79527e40b9c19", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "BÖLKT" },
+          { "day": "20261231", "dayUtc": 20818, "word": "DAURE" },
+          { "day": "20270101", "dayUtc": 20819, "word": "QUÖLL" },
+          { "day": "20270615", "dayUtc": 20984, "word": "FEGTE" },
+          { "day": "20280229", "dayUtc": 21243, "word": "ÖDETE" }
+        ] },
+        "6": { "poolSize": 11785, "poolSha256": "7b5af9d4afd65a4cc8511b78cd9758c26f336cbc1a6cb17edc47248a07940bd3", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "BETANZ" },
+          { "day": "20261231", "dayUtc": 20818, "word": "KARGEM" },
+          { "day": "20270101", "dayUtc": 20819, "word": "FREVEL" },
+          { "day": "20270615", "dayUtc": 20984, "word": "DICKES" },
+          { "day": "20280229", "dayUtc": 21243, "word": "GEWISS" }
+        ] },
+        "7": { "poolSize": 22166, "poolSha256": "b1621de38e0fc36f5241547af1ca07e827e3700dd5ea20f9a2eb60d195e7759b", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "FETALEM" },
+          { "day": "20261231", "dayUtc": 20818, "word": "BEIFÜGE" },
+          { "day": "20270101", "dayUtc": 20819, "word": "EINRÜHR" },
+          { "day": "20270615", "dayUtc": 20984, "word": "AUSLIST" },
+          { "day": "20280229", "dayUtc": 21243, "word": "ROTIERT" }
+        ] },
+        "8": { "poolSize": 35425, "poolSha256": "1d754331245136c96f2187d802d6e0f7ad46b06f862d3eef89a04a04a1020ffa", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "EINZEHIG" },
+          { "day": "20261231", "dayUtc": 20818, "word": "ZERSTOßT" },
+          { "day": "20270101", "dayUtc": 20819, "word": "BESTICHT" },
+          { "day": "20270615", "dayUtc": 20984, "word": "WEGTAUEN" },
+          { "day": "20280229", "dayUtc": 21243, "word": "BELOGENE" }
+        ] }
+      }
+    },
+    "es": {
+      "source": "https://abons.github.io/wordguesser/wordlists/es-v1.txt",
+      "salt": 3246,
+      "extra": "", "fold": true, "min": 4, "max": 8,
+      "lengths": {
+        "4": { "poolSize": 2920, "poolSha256": "270d2dbc118c0d1c87368fdbafc9db0ef6699b29c055a942fe95a8349ad40b45", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "DODO" },
+          { "day": "20261231", "dayUtc": 20818, "word": "REID" },
+          { "day": "20270101", "dayUtc": 20819, "word": "COGI" },
+          { "day": "20270615", "dayUtc": 20984, "word": "CUBA" },
+          { "day": "20280229", "dayUtc": 21243, "word": "BIFE" }
+        ] },
+        "5": { "poolSize": 10824, "poolSha256": "a29c2b918535e267e980d67b66b1aad7b041af23275a7c30b56f6ae6bcc085fa", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "RONZO" },
+          { "day": "20261231", "dayUtc": 20818, "word": "PELDE" },
+          { "day": "20270101", "dayUtc": 20819, "word": "AONIA" },
+          { "day": "20270615", "dayUtc": 20984, "word": "ADIEN" },
+          { "day": "20280229", "dayUtc": 21243, "word": "GOMER" }
+        ] },
+        "6": { "poolSize": 25396, "poolSha256": "59524bb984c9c8724770d892ac38b4b4bea0e1d5cdeb2c808a6f1cc8546b9e24", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "GRUESA" },
+          { "day": "20261231", "dayUtc": 20818, "word": "ABURAN" },
+          { "day": "20270101", "dayUtc": 20819, "word": "ESPAHI" },
+          { "day": "20270615", "dayUtc": 20984, "word": "HOJEAS" },
+          { "day": "20280229", "dayUtc": 21243, "word": "VOZNES" }
+        ] },
+        "7": { "poolSize": 49123, "poolSha256": "837e12c82847738c4b52db0042376a95d5c73b2eed5fe45a05bf44590ba57417", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "GANASTE" },
+          { "day": "20261231", "dayUtc": 20818, "word": "ORINARE" },
+          { "day": "20270101", "dayUtc": 20819, "word": "AGUIJEN" },
+          { "day": "20270615", "dayUtc": 20984, "word": "VIATICO" },
+          { "day": "20280229", "dayUtc": 21243, "word": "FROGUEN" }
+        ] },
+        "8": { "poolSize": 75484, "poolSha256": "5d9c59de366703be2608d11e87bb03f22d1acbc76cf47df3b1627f38508da5f6", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "ENTECABA" },
+          { "day": "20261231", "dayUtc": 20818, "word": "ENRATONO" },
+          { "day": "20270101", "dayUtc": 20819, "word": "MORFABAN" },
+          { "day": "20270615", "dayUtc": 20984, "word": "INGENUOS" },
+          { "day": "20280229", "dayUtc": 21243, "word": "PRURITOS" }
+        ] }
+      }
+    },
+    "it": {
+      "source": "https://abons.github.io/wordguesser/wordlists/it-v1.txt",
+      "salt": 3371,
+      "extra": "", "fold": true, "min": 5, "max": 8,
+      "lengths": {
+        "5": { "poolSize": 2208, "poolSha256": "6fa60a57b806545d25e9c246ea0b180fcaecac5a98a3c3434afea19f453a6621", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "DESIO" },
+          { "day": "20261231", "dayUtc": 20818, "word": "BRUTO" },
+          { "day": "20270101", "dayUtc": 20819, "word": "AMICA" },
+          { "day": "20270615", "dayUtc": 20984, "word": "MILIO" },
+          { "day": "20280229", "dayUtc": 21243, "word": "OMINE" }
+        ] },
+        "6": { "poolSize": 4108, "poolSha256": "35900e151bfde7f8bf86199e10ee3e1c5bc247287fa9ed0d7d77f5a7c6b5f592", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "CURARO" },
+          { "day": "20261231", "dayUtc": 20818, "word": "ANSATO" },
+          { "day": "20270101", "dayUtc": 20819, "word": "LEVATO" },
+          { "day": "20270615", "dayUtc": 20984, "word": "BIMANO" },
+          { "day": "20280229", "dayUtc": 21243, "word": "ALLELE" }
+        ] },
+        "7": { "poolSize": 7780, "poolSha256": "56e80c6847c1460f508e6b54e79cb3668285021a6784b2e54570cec7bd8310b5", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "EPATICO" },
+          { "day": "20261231", "dayUtc": 20818, "word": "APPANTE" },
+          { "day": "20270101", "dayUtc": 20819, "word": "ODIERNO" },
+          { "day": "20270615", "dayUtc": 20984, "word": "TEBAINA" },
+          { "day": "20280229", "dayUtc": 21243, "word": "ITACESE" }
+        ] },
+        "8": { "poolSize": 10401, "poolSha256": "257a85da22d9b3aac466e6f70133ece60525a3a2f44e6c8eef002b4730b1ae1b", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "CONCLUSO" },
+          { "day": "20261231", "dayUtc": 20818, "word": "RIVENUTO" },
+          { "day": "20270101", "dayUtc": 20819, "word": "SUPERMAN" },
+          { "day": "20270615", "dayUtc": 20984, "word": "SDRAIATO" },
+          { "day": "20280229", "dayUtc": 21243, "word": "ESTRELIA" }
+        ] }
+      }
+    },
+    "pt": {
+      "source": "https://abons.github.io/wordguesser/wordlists/pt-v1.txt",
+      "salt": 3588,
+      "extra": "", "fold": true, "min": 4, "max": 8,
+      "lengths": {
+        "4": { "poolSize": 2518, "poolSha256": "986b56bf257453e64f15ce1271ca69b761523b842010cedeca8c07f80816aadf", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "ALTO" },
+          { "day": "20261231", "dayUtc": 20818, "word": "COIO" },
+          { "day": "20270101", "dayUtc": 20819, "word": "GIGÔ" },
+          { "day": "20270615", "dayUtc": 20984, "word": "PREÁ" },
+          { "day": "20280229", "dayUtc": 21243, "word": "JEJÊ" }
+        ] },
+        "5": { "poolSize": 7535, "poolSha256": "8aa1200d553de74b1cc1cbd0c65c381983d5d899ed6d5748fd16a445a6d7cb01", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "LUQUE" },
+          { "day": "20261231", "dayUtc": 20818, "word": "VITAL" },
+          { "day": "20270101", "dayUtc": 20819, "word": "OVEVA" },
+          { "day": "20270615", "dayUtc": 20984, "word": "MAZIA" },
+          { "day": "20280229", "dayUtc": 21243, "word": "MONFA" }
+        ] },
+        "6": { "poolSize": 15802, "poolSha256": "54b42c03e9b6ae36a47f814f4d7456066918d0ec118b77979887f416ae618757", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "BICATO" },
+          { "day": "20261231", "dayUtc": 20818, "word": "GIGOTE" },
+          { "day": "20270101", "dayUtc": 20819, "word": "ORÍZEO" },
+          { "day": "20270615", "dayUtc": 20984, "word": "HEBREU" },
+          { "day": "20280229", "dayUtc": 21243, "word": "RÔUREA" }
+        ] },
+        "7": { "poolSize": 24208, "poolSha256": "de56d362a404f7991d6359c4d262a1040b1cfa5eee3cbcc43746c1949e16d7ef", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "ALTÊNIA" },
+          { "day": "20261231", "dayUtc": 20818, "word": "FORINTE" },
+          { "day": "20270101", "dayUtc": 20819, "word": "PALMETO" },
+          { "day": "20270615", "dayUtc": 20984, "word": "NEOCANA" },
+          { "day": "20280229", "dayUtc": 21243, "word": "MUDÉJAR" }
+        ] },
+        "8": { "poolSize": 32332, "poolSha256": "5d773d531a4c83fc3df63a52509172b272127d780795c54ea0efba1d010b40b7", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "SEMINATA" },
+          { "day": "20261231", "dayUtc": 20818, "word": "DESTRUIR" },
+          { "day": "20270101", "dayUtc": 20819, "word": "CHERIVIA" },
+          { "day": "20270615", "dayUtc": 20984, "word": "LATÁTIPO" },
+          { "day": "20280229", "dayUtc": 21243, "word": "CATUALIA" }
+        ] }
+      }
+    },
+    "ca": {
+      "source": "https://abons.github.io/wordguesser/wordlists/ca-v1.txt",
+      "salt": 3166,
+      "extra": "", "fold": true, "min": 4, "max": 8,
+      "lengths": {
+        "4": { "poolSize": 2565, "poolSha256": "492ff0e4a66836e25736fee40564c28d66bc2df746937be049e8b3fafabaa349", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "LLUÇ" },
+          { "day": "20261231", "dayUtc": 20818, "word": "BOGA" },
+          { "day": "20270101", "dayUtc": 20819, "word": "ÉREM" },
+          { "day": "20270615", "dayUtc": 20984, "word": "PIXA" },
+          { "day": "20280229", "dayUtc": 21243, "word": "OVAL" }
+        ] },
+        "5": { "poolSize": 6723, "poolSha256": "bf5e5b902b986d9d6caa3f9144d165fc068f4dead28cedab38c4e7e16dfab636", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "CARRI" },
+          { "day": "20261231", "dayUtc": 20818, "word": "BUSCA" },
+          { "day": "20270101", "dayUtc": 20819, "word": "TRIVI" },
+          { "day": "20270615", "dayUtc": 20984, "word": "NEROL" },
+          { "day": "20280229", "dayUtc": 21243, "word": "CALGA" }
+        ] },
+        "6": { "poolSize": 11630, "poolSha256": "97b4874fb98ffa615d7fb82e0da718997293900b5231abfa96aec569be0ac52d", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "ESCAIC" },
+          { "day": "20261231", "dayUtc": 20818, "word": "KIRSCH" },
+          { "day": "20270101", "dayUtc": 20819, "word": "IREIXI" },
+          { "day": "20270615", "dayUtc": 20984, "word": "XERRIC" },
+          { "day": "20280229", "dayUtc": 21243, "word": "AIMARA" }
+        ] },
+        "7": { "poolSize": 16928, "poolSha256": "05556b2cd0fa79dd9fea783ddf2ecdf8a590a768f57070a1d5e3124104d850c0", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "QUISLEU" },
+          { "day": "20261231", "dayUtc": 20818, "word": "PERESÓS" },
+          { "day": "20270101", "dayUtc": 20819, "word": "RECAVAR" },
+          { "day": "20270615", "dayUtc": 20984, "word": "VÍSCERA" },
+          { "day": "20280229", "dayUtc": 21243, "word": "AVENGUT" }
+        ] },
+        "8": { "poolSize": 21939, "poolSha256": "1100050a25bf53177e4fac0cab023479b989ee52ed60b96bc00f4dc41197fef8", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "GLUCOGEN" },
+          { "day": "20261231", "dayUtc": 20818, "word": "REFLEXIU" },
+          { "day": "20270101", "dayUtc": 20819, "word": "ESCALADA" },
+          { "day": "20270615", "dayUtc": 20984, "word": "DARBISTA" },
+          { "day": "20280229", "dayUtc": 21243, "word": "PREVISOR" }
+        ] }
+      }
+    },
+    "ro": {
+      "source": "https://abons.github.io/wordguesser/wordlists/ro-v1.txt",
+      "salt": 3645,
+      "extra": "", "fold": true, "min": 4, "max": 8,
+      "lengths": {
+        "4": { "poolSize": 2503, "poolSha256": "6833bdb700c17bdc97f82767a4b356e041f738c7e822ef5a97ac0c0b401a62c2", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "TEMU" },
+          { "day": "20261231", "dayUtc": 20818, "word": "ÎNCĂ" },
+          { "day": "20270101", "dayUtc": 20819, "word": "LENE" },
+          { "day": "20270615", "dayUtc": 20984, "word": "NORD" },
+          { "day": "20280229", "dayUtc": 21243, "word": "ROCK" }
+        ] },
+        "5": { "poolSize": 6684, "poolSha256": "8106ac13cf554c5d4f99c43e830f78316055bd28ffd1ddbc74ea2d6c2e71f1f2", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "ANURĂ" },
+          { "day": "20261231", "dayUtc": 20818, "word": "ALBIA" },
+          { "day": "20270101", "dayUtc": 20819, "word": "PIESĂ" },
+          { "day": "20270615", "dayUtc": 20984, "word": "MONAC" },
+          { "day": "20280229", "dayUtc": 21243, "word": "VATIR" }
+        ] },
+        "6": { "poolSize": 11797, "poolSha256": "f086e8eff6960c2dd5ca477a05dde631b00c0aeed20cc3ee343a318e424e50e8", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "RSYNCD" },
+          { "day": "20261231", "dayUtc": 20818, "word": "PANGAR" },
+          { "day": "20270101", "dayUtc": 20819, "word": "GROSUȚ" },
+          { "day": "20270615", "dayUtc": 20984, "word": "ALALIE" },
+          { "day": "20280229", "dayUtc": 21243, "word": "TAICII" }
+        ] },
+        "7": { "poolSize": 17689, "poolSha256": "761eb13f7ff8cf4a594b4fd2fb89a07bb478c5ae3540bf5fc1bec289a89ee1ff", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "ZĂUITAU" },
+          { "day": "20261231", "dayUtc": 20818, "word": "GĂLUȘCA" },
+          { "day": "20270101", "dayUtc": 20819, "word": "VIZUINĂ" },
+          { "day": "20270615", "dayUtc": 20984, "word": "SEBACEA" },
+          { "day": "20280229", "dayUtc": 21243, "word": "PĂSARĂM" }
+        ] },
+        "8": { "poolSize": 22295, "poolSha256": "48c9443d2e9171fbf20c3be7269f7c2825a95ec618b64c80d0c7902345a6a534", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "RETÂRȘIT" },
+          { "day": "20261231", "dayUtc": 20818, "word": "ÎNTĂRARE" },
+          { "day": "20270101", "dayUtc": 20819, "word": "SUBSCRIS" },
+          { "day": "20270615", "dayUtc": 20984, "word": "POLUANTĂ" },
+          { "day": "20280229", "dayUtc": 21243, "word": "PLENUIRE" }
+        ] }
+      }
+    },
+    "sv": {
+      "source": "https://abons.github.io/wordguesser/wordlists/sv-v1.txt",
+      "salt": 3683,
+      "extra": "", "fold": true, "min": 4, "max": 8,
+      "lengths": {
+        "4": { "poolSize": 2358, "poolSha256": "056c830e2c9c76a0b78e86ca319e068eb510169f9164c948fb698129b542ae9f", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "STUG" },
+          { "day": "20261231", "dayUtc": 20818, "word": "PEST" },
+          { "day": "20270101", "dayUtc": 20819, "word": "RÖNN" },
+          { "day": "20270615", "dayUtc": 20984, "word": "LUFT" },
+          { "day": "20280229", "dayUtc": 21243, "word": "PUST" }
+        ] },
+        "5": { "poolSize": 4466, "poolSha256": "2fd2e10af8d55b80b5a224e8269859cab041482261c244ae2bdf023f88ff7ff1", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "HALVÖ" },
+          { "day": "20261231", "dayUtc": 20818, "word": "VÄRME" },
+          { "day": "20270101", "dayUtc": 20819, "word": "TRALL" },
+          { "day": "20270615", "dayUtc": 20984, "word": "STOCK" },
+          { "day": "20280229", "dayUtc": 21243, "word": "SEEDA" }
+        ] },
+        "6": { "poolSize": 7940, "poolSha256": "4fa690c253e01cad54c7308c8a1267cba99e9356613cbfb30e0456a6cb1eb48c", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "KVÄDIT" },
+          { "day": "20261231", "dayUtc": 20818, "word": "SPIREA" },
+          { "day": "20270101", "dayUtc": 20819, "word": "SKEJTA" },
+          { "day": "20270615", "dayUtc": 20984, "word": "PÅHOPP" },
+          { "day": "20280229", "dayUtc": 21243, "word": "KARAFF" }
+        ] },
+        "7": { "poolSize": 13500, "poolSha256": "d8dc1183e6fb410230f4e589f95ccafe3ee82cdc5cb34eeb0c862cec5b53b2ed", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "BAKSLUG" },
+          { "day": "20261231", "dayUtc": 20818, "word": "AVSÄNDA" },
+          { "day": "20270101", "dayUtc": 20819, "word": "BURLESK" },
+          { "day": "20270615", "dayUtc": 20984, "word": "JORDMÅN" },
+          { "day": "20280229", "dayUtc": 21243, "word": "PALMVIN" }
+        ] },
+        "8": { "poolSize": 18772, "poolSha256": "8547893751fb5085d85ac9dd82f8fecd3dc6de6e2d3359c4b10502972898cc7e", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "UNDERDOG" },
+          { "day": "20261231", "dayUtc": 20818, "word": "RUSIGHET" },
+          { "day": "20270101", "dayUtc": 20819, "word": "VÄXELVIS" },
+          { "day": "20270615", "dayUtc": 20984, "word": "RESLÄNGD" },
+          { "day": "20280229", "dayUtc": 21243, "word": "TJUGOFEM" }
+        ] }
+      }
+    },
+    "cs": {
+      "source": "https://abons.github.io/wordguesser/wordlists/cs-v1.txt",
+      "salt": 3184,
+      "extra": "", "fold": true, "min": 4, "max": 8,
+      "lengths": {
+        "4": { "poolSize": 2380, "poolSha256": "1a3537853c64e2df4d1ef2a67ef41be6ba21003a377a425a3aa935a3639e9963", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "DĚVÍ" },
+          { "day": "20261231", "dayUtc": 20818, "word": "RÝŽE" },
+          { "day": "20270101", "dayUtc": 20819, "word": "USEŇ" },
+          { "day": "20270615", "dayUtc": 20984, "word": "TEIN" },
+          { "day": "20280229", "dayUtc": 21243, "word": "PŠŠT" }
+        ] },
+        "5": { "poolSize": 5833, "poolSha256": "50ae5c51ff26bc317476f5f884864c01de37c7a333a1c8514911b56474b53134", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "HORKA" },
+          { "day": "20261231", "dayUtc": 20818, "word": "KUŘBA" },
+          { "day": "20270101", "dayUtc": 20819, "word": "TRÉMA" },
+          { "day": "20270615", "dayUtc": 20984, "word": "FOLIO" },
+          { "day": "20280229", "dayUtc": 21243, "word": "VYDŘE" }
+        ] },
+        "6": { "poolSize": 10130, "poolSha256": "9c52570c72b8a4673ca7fd71cdb90e7e9aa7acc93d0aeaf4f96c24ef09758ad9", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "SYPANÝ" },
+          { "day": "20261231", "dayUtc": 20818, "word": "OSOBÁK" },
+          { "day": "20270101", "dayUtc": 20819, "word": "HLOUBI" },
+          { "day": "20270615", "dayUtc": 20984, "word": "PAPÁNÍ" },
+          { "day": "20280229", "dayUtc": 21243, "word": "HLEZNO" }
+        ] },
+        "7": { "poolSize": 16168, "poolSha256": "018569eac08b14758ca9f3b8a09797898b4073b29023de8631e6acf5e973c295", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "MEZOLIT" },
+          { "day": "20261231", "dayUtc": 20818, "word": "KUBICKÝ" },
+          { "day": "20270101", "dayUtc": 20819, "word": "DOVLÁNÍ" },
+          { "day": "20270615", "dayUtc": 20984, "word": "PILNICE" },
+          { "day": "20280229", "dayUtc": 21243, "word": "VYPLENÍ" }
+        ] },
+        "8": { "poolSize": 21858, "poolSha256": "9224d544fbc5b2a96732266c7af8337572141f222959231d2430ab885cd52059", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "PETROLEJ" },
+          { "day": "20261231", "dayUtc": 20818, "word": "KAPALNIT" },
+          { "day": "20270101", "dayUtc": 20819, "word": "ČISTOTNÝ" },
+          { "day": "20270615", "dayUtc": 20984, "word": "SVĚŽEJŠÍ" },
+          { "day": "20280229", "dayUtc": 21243, "word": "ZŘETELEM" }
+        ] }
+      }
+    },
+    "sk": {
+      "source": "https://abons.github.io/wordguesser/wordlists/sk-v1.txt",
+      "salt": 3672,
+      "extra": "", "fold": true, "min": 4, "max": 8,
+      "lengths": {
+        "4": { "poolSize": 3743, "poolSha256": "6344d1d4aa34ef08dad2814b94f503c835a1bf109bec34595b89fa486158e746", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "OPIS" },
+          { "day": "20261231", "dayUtc": 20818, "word": "RAPS" },
+          { "day": "20270101", "dayUtc": 20819, "word": "TÍLD" },
+          { "day": "20270615", "dayUtc": 20984, "word": "FIGA" },
+          { "day": "20280229", "dayUtc": 21243, "word": "HAŠÉ" }
+        ] },
+        "5": { "poolSize": 8946, "poolSha256": "1ec3a3e3432af0b9b195ec72a45992e87c6d364b75fd83479de882cbbe6a5933", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "MASÉR" },
+          { "day": "20261231", "dayUtc": 20818, "word": "ARMÉN" },
+          { "day": "20270101", "dayUtc": 20819, "word": "UŠITE" },
+          { "day": "20270615", "dayUtc": 20984, "word": "VZPER" },
+          { "day": "20280229", "dayUtc": 21243, "word": "NAJAŤ" }
+        ] },
+        "6": { "poolSize": 14855, "poolSha256": "16d4bd4def935e1bc5f2f72329e0e60edfefcd4fb37b69b858c1c142fd06b8a5", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "TRINOM" },
+          { "day": "20261231", "dayUtc": 20818, "word": "FĽASKU" },
+          { "day": "20270101", "dayUtc": 20819, "word": "OTOLIT" },
+          { "day": "20270615", "dayUtc": 20984, "word": "ZNUDIŤ" },
+          { "day": "20280229", "dayUtc": 21243, "word": "FACKAŤ" }
+        ] },
+        "7": { "poolSize": 22979, "poolSha256": "d5d8f5151385be449dbac6e73bbe3efba7c21e68a9b0d95fc14f51bbda0f2490", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "VZLETNÝ" },
+          { "day": "20261231", "dayUtc": 20818, "word": "PODRKOC" },
+          { "day": "20270101", "dayUtc": 20819, "word": "BRÚSENÉ" },
+          { "day": "20270615", "dayUtc": 20984, "word": "POLAPIŤ" },
+          { "day": "20280229", "dayUtc": 21243, "word": "TRHANKA" }
+        ] },
+        "8": { "poolSize": 28972, "poolSha256": "c4e28ad4d009e5e1b5b80422498522cde10fab652592d6d18e887fb456bfaa77", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "STÍCHATE" },
+          { "day": "20261231", "dayUtc": 20818, "word": "HRDLAČIŤ" },
+          { "day": "20270101", "dayUtc": 20819, "word": "SPEVNENE" },
+          { "day": "20270615", "dayUtc": 20984, "word": "VÝPISOVÝ" },
+          { "day": "20280229", "dayUtc": 21243, "word": "POTRHNÚŤ" }
+        ] }
+      }
+    },
+    "da": {
+      "source": "https://abons.github.io/wordguesser/wordlists/da-v1.txt",
+      "salt": 3197,
+      "extra": "ÆØ", "fold": true, "min": 4, "max": 8,
+      "lengths": {
+        "4": { "poolSize": 2246, "poolSha256": "884934fcc161eff1f9bef2cf90e1a6346c261bb342fa097733fa6b2a8b12436f", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "GRAV" },
+          { "day": "20261231", "dayUtc": 20818, "word": "ÆTSE" },
+          { "day": "20270101", "dayUtc": 20819, "word": "FORE" },
+          { "day": "20270615", "dayUtc": 20984, "word": "KAMÉ" },
+          { "day": "20280229", "dayUtc": 21243, "word": "TAVS" }
+        ] },
+        "5": { "poolSize": 4297, "poolSha256": "0f796b814a496c6a3f722af28d11f76bcdbd2153e7a7587b6238783fffb5684f", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "NYMFE" },
+          { "day": "20261231", "dayUtc": 20818, "word": "TAPIR" },
+          { "day": "20270101", "dayUtc": 20819, "word": "NIECE" },
+          { "day": "20270615", "dayUtc": 20984, "word": "NERTZ" },
+          { "day": "20280229", "dayUtc": 21243, "word": "IMMER" }
+        ] },
+        "6": { "poolSize": 6481, "poolSha256": "cb7cb1a0e5ad21adc65848c112dda044cd5aba76baad11f16ee6c757b030fd62", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "TAMKAT" },
+          { "day": "20261231", "dayUtc": 20818, "word": "TIFOSI" },
+          { "day": "20270101", "dayUtc": 20819, "word": "DIGTER" },
+          { "day": "20270615", "dayUtc": 20984, "word": "GALMYG" },
+          { "day": "20280229", "dayUtc": 21243, "word": "HØSTÅR" }
+        ] },
+        "7": { "poolSize": 9251, "poolSha256": "25f3daa2779341f275af57152463f73515ee91cfb8e5197e52a0937243c09bed", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "SPÆRFAG" },
+          { "day": "20261231", "dayUtc": 20818, "word": "LYSMAND" },
+          { "day": "20270101", "dayUtc": 20819, "word": "ONESTEP" },
+          { "day": "20270615", "dayUtc": 20984, "word": "NABOLAG" },
+          { "day": "20280229", "dayUtc": 21243, "word": "OVENFOR" }
+        ] },
+        "8": { "poolSize": 11838, "poolSha256": "0606a07c7555f96379a05e939096dddd6538ca0aba626125b55d289c3d8f1881", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "HUSREGEL" },
+          { "day": "20261231", "dayUtc": 20818, "word": "RINGBIND" },
+          { "day": "20270101", "dayUtc": 20819, "word": "ELBASVIR" },
+          { "day": "20270615", "dayUtc": 20984, "word": "INDTAGET" },
+          { "day": "20280229", "dayUtc": 21243, "word": "DIATERMI" }
+        ] }
+      }
+    },
+    "nb": {
+      "source": "https://abons.github.io/wordguesser/wordlists/nb-v1.txt",
+      "salt": 3508,
+      "extra": "ÆØ", "fold": true, "min": 4, "max": 8,
+      "lengths": {
+        "4": { "poolSize": 3862, "poolSha256": "6ce590a6bc7aed62b32d8a5185311a5259449effd388d15cc7305f408a9aa599", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "LASS" },
+          { "day": "20261231", "dayUtc": 20818, "word": "LEPE" },
+          { "day": "20270101", "dayUtc": 20819, "word": "KLYP" },
+          { "day": "20270615", "dayUtc": 20984, "word": "MAIE" },
+          { "day": "20280229", "dayUtc": 21243, "word": "KNES" }
+        ] },
+        "5": { "poolSize": 6524, "poolSha256": "61347245d28c6078aec8b017f0a1c4aee5fce3a7856555ac3ca996180363fa5d", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "KALLE" },
+          { "day": "20261231", "dayUtc": 20818, "word": "HYFSE" },
+          { "day": "20270101", "dayUtc": 20819, "word": "PLIRE" },
+          { "day": "20270615", "dayUtc": 20984, "word": "UNDER" },
+          { "day": "20280229", "dayUtc": 21243, "word": "PLEDD" }
+        ] },
+        "6": { "poolSize": 9378, "poolSha256": "a7aa0a22d156511f1c6837a9c8a9a8bf825d2e80579267255ac1ee7e3a89b509", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "TECHNO" },
+          { "day": "20261231", "dayUtc": 20818, "word": "KOLERA" },
+          { "day": "20270101", "dayUtc": 20819, "word": "BAYERE" },
+          { "day": "20270615", "dayUtc": 20984, "word": "LINDRE" },
+          { "day": "20280229", "dayUtc": 21243, "word": "KATENE" }
+        ] },
+        "7": { "poolSize": 14860, "poolSha256": "7caf379086ae652ce284c5e851318726a3f17ad978a254a5c5dfbdca1523b9f8", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "UTTRYKK" },
+          { "day": "20261231", "dayUtc": 20818, "word": "PAPYRUS" },
+          { "day": "20270101", "dayUtc": 20819, "word": "UTBYDER" },
+          { "day": "20270615", "dayUtc": 20984, "word": "NYTENKE" },
+          { "day": "20280229", "dayUtc": 21243, "word": "XENOFOB" }
+        ] },
+        "8": { "poolSize": 21485, "poolSha256": "14feff12e939a3065e905b4d4a98cbf2ecfa875a0f98fa9fb6a8200ca39f3e32", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "HOVMOTET" },
+          { "day": "20261231", "dayUtc": 20818, "word": "FILMBYRÅ" },
+          { "day": "20270101", "dayUtc": 20819, "word": "SKAUSNAR" },
+          { "day": "20270615", "dayUtc": 20984, "word": "MERKEPÆL" },
+          { "day": "20280229", "dayUtc": 21243, "word": "LINSEFRØ" }
+        ] }
+      }
+    },
+    "pl": {
+      "source": "https://abons.github.io/wordguesser/wordlists/pl-v1.txt",
+      "salt": 3580,
+      "extra": "Ł", "fold": true, "min": 4, "max": 8,
+      "lengths": {
+        "4": { "poolSize": 3128, "poolSha256": "733573e780616f0b53bbd3e0c01403523229dd870856ccfa05b4500bb12cf450", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "DALA" },
+          { "day": "20261231", "dayUtc": 20818, "word": "CLOU" },
+          { "day": "20270101", "dayUtc": 20819, "word": "TORF" },
+          { "day": "20270615", "dayUtc": 20984, "word": "JARY" },
+          { "day": "20280229", "dayUtc": 21243, "word": "BUSZ" }
+        ] },
+        "5": { "poolSize": 7124, "poolSha256": "2287914fc358b64e4c6c0b0079b124bec8caa50e7d4da3d25ae1663836e05075", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "DUNIT" },
+          { "day": "20261231", "dayUtc": 20818, "word": "BLIŻA" },
+          { "day": "20270101", "dayUtc": 20819, "word": "LURKA" },
+          { "day": "20270615", "dayUtc": 20984, "word": "PUNKT" },
+          { "day": "20280229", "dayUtc": 21243, "word": "SLAMS" }
+        ] },
+        "6": { "poolSize": 11605, "poolSha256": "cbb674df67525bb97a4e5b52e16e33f6f834739076fe04e1d1304131f573d2a3", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "CZĄBRU" },
+          { "day": "20261231", "dayUtc": 20818, "word": "SKOLIT" },
+          { "day": "20270101", "dayUtc": 20819, "word": "WNIEŚĆ" },
+          { "day": "20270615", "dayUtc": 20984, "word": "ZAWIJA" },
+          { "day": "20280229", "dayUtc": 21243, "word": "ZWĘŻAĆ" }
+        ] },
+        "7": { "poolSize": 17008, "poolSha256": "acd46b3a3a144a4ba7b442fd30976f7eaaa77b358a3dee57b4a3480edbf20528", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "WAŃKAMI" },
+          { "day": "20261231", "dayUtc": 20818, "word": "DWUSTER" },
+          { "day": "20270101", "dayUtc": 20819, "word": "ZOSTERA" },
+          { "day": "20270615", "dayUtc": 20984, "word": "KIJARKA" },
+          { "day": "20280229", "dayUtc": 21243, "word": "OBLEGAĆ" }
+        ] },
+        "8": { "poolSize": 22291, "poolSha256": "02b39c5dd82a33e5ac96e978d040cb467453df14a3211e8a34c251e36475859f", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "KONEKSJA" },
+          { "day": "20261231", "dayUtc": 20818, "word": "OSTYGNĄĆ" },
+          { "day": "20270101", "dayUtc": 20819, "word": "METALLIC" },
+          { "day": "20270615", "dayUtc": 20984, "word": "ODSŁONIĆ" },
+          { "day": "20280229", "dayUtc": 21243, "word": "PODKARŁA" }
+        ] }
+      }
+    },
+    "hr": {
+      "source": "https://abons.github.io/wordguesser/wordlists/hr-v1.txt",
+      "salt": 3338,
+      "extra": "Đ", "fold": true, "min": 5, "max": 8,
+      "lengths": {
+        "5": { "poolSize": 3296, "poolSha256": "9ee59b47e19660c349a3cd0fde5d8ad5a57f1791a51d9c8a21dfafcd7d38eca7", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "RIBEŽ" },
+          { "day": "20261231", "dayUtc": 20818, "word": "ČASAK" },
+          { "day": "20270101", "dayUtc": 20819, "word": "KRČKI" },
+          { "day": "20270615", "dayUtc": 20984, "word": "FLAŠA" },
+          { "day": "20280229", "dayUtc": 21243, "word": "OBOMA" }
+        ] },
+        "6": { "poolSize": 5157, "poolSha256": "359a95dfb1b8b5bd156039390a29e67804d1f7998607e8effc589fbe4f8b7f9c", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "SJETVA" },
+          { "day": "20261231", "dayUtc": 20818, "word": "BARICA" },
+          { "day": "20270101", "dayUtc": 20819, "word": "ĆERPIČ" },
+          { "day": "20270615", "dayUtc": 20984, "word": "MAKSIM" },
+          { "day": "20280229", "dayUtc": 21243, "word": "PALČAN" }
+        ] },
+        "7": { "poolSize": 7131, "poolSha256": "56d5e639a6095af27a2bdb1e81d1729cb6f3a4d3ae7b134f8e9506d077043c6c", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "KOMUŠKA" },
+          { "day": "20261231", "dayUtc": 20818, "word": "OSMIJEH" },
+          { "day": "20270101", "dayUtc": 20819, "word": "SOLARIJ" },
+          { "day": "20270615", "dayUtc": 20984, "word": "ISPRIKA" },
+          { "day": "20280229", "dayUtc": 21243, "word": "PRESTIŽ" }
+        ] },
+        "8": { "poolSize": 8237, "poolSha256": "81014950f03648103b359963882d87d4b4edd01c4e8ebaf644a80725cebd1194", "samples": [
+          { "day": "20260901", "dayUtc": 20697, "word": "SAVJETNI" },
+          { "day": "20261231", "dayUtc": 20818, "word": "POPUNITI" },
+          { "day": "20270101", "dayUtc": 20819, "word": "ŠTOVALAC" },
+          { "day": "20270615", "dayUtc": 20984, "word": "PRASTRIC" },
+          { "day": "20280229", "dayUtc": 21243, "word": "INTERNET" }
+        ] }
+      }
     }
   }
 }
