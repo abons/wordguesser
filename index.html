@@ -65,6 +65,9 @@
   .key { background: #818384; border: none; border-radius: 4px; color: #eee; font-weight: 700;
          min-width: 30px; padding: 14px 8px; font-size: 14px; cursor: pointer; }
   .key.wide { min-width: 52px; }
+  .row { position: relative; align-items: center; }
+  .hint { background: none; border: none; color: #9aa0a6; font-weight: 700; font-size: 17px;
+          cursor: pointer; padding: 0 0 0 6px; }
   .key.correct { background: #538d4e; }
   .key.present { background: #b59f3b; }
   .key.absent  { background: #3a3a3c; }
@@ -121,6 +124,7 @@
   <select id="len" aria-label="Word length"></select>
   <button id="daily">Daily</button>
   <button id="free">Free play</button>
+  <button id="install" hidden>📲 Install</button>
 </div>
 <div id="app"></div>
 

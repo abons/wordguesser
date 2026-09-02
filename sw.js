@@ -1,7 +1,7 @@
 /* Skeleton service worker: cache-first shell, cache-first word lists (they are immutable-by-rule on
  * the mirror: a content change is a new -v<n> name, and the unversioned NL files bump the app's own
  * cache logic — revisit when list refresh lands; see todo.md). Bump VERSION on every deploy. */
-const VERSION = "v202608311631";
+const VERSION = "v202609021148";
 const SHELL = ["./", "app.js", "manifest.webmanifest", "icon-192.png", "icon-512.png"];
 
 self.addEventListener("install", (e) => {
