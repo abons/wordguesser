@@ -52,6 +52,7 @@
   .header { text-align: center; margin-top: 2px; }
   .title { font-size: 22px; font-weight: 700; letter-spacing: 2px; }
   .status { font-size: 13px; color: #aaa; margin-top: 2px; }
+  .status.warn { color: #ff6b6b; }
   .board { display: flex; flex-direction: column; gap: 5px; margin: 14px 0 6px; }
   .row { display: flex; gap: 5px; justify-content: center; }
   .tile { width: 52px; height: 52px; border: 2px solid #3a3a3c; display: flex; align-items: center;
@@ -128,6 +129,7 @@
   <select id="len" aria-label="Word length"></select>
   <button id="daily">Daily</button>
   <button id="free">Free play</button>
+  <button id="timedbtn">⏱ Timed</button>
   <button id="install" hidden>📲 Install</button>
 </div>
 <div id="app"></div>
