@@ -42,45 +42,55 @@
 }
 </script>
 <style>
-  /* Skeleton styling — provisional on purpose; the real design pass is todo.md work. */
+  /*
+   * Chrome/typography still a skeleton, but the game surface now borrows Android's actual tokens:
+   * the MEADOW scene's sky→ground gradient (SceneBackground.kt's Palette — skyTop/skyBottom/far/
+   * mid/near, HORIZON=0.74) stands in for the eight-scene rotation (out of scope here — those are
+   * drawn shapes, not a CSS-portable asset), and the tile/key colours already matched exactly
+   * (Skin.SCENIC's correct/present/absent/tileBorderEmpty). Rounded corners and the grey chrome-
+   * button fill (Skin.SCENIC.keyDefault, #818384) are the app's, not a browser default.
+   */
   :root { color-scheme: dark; }
   body { margin: 0; background: #121213; color: #eee; font: 16px system-ui, sans-serif;
          display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
-  .controls { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; padding: 10px; align-items: center; }
-  .controls select, .controls button { background: #2a2a2c; color: #eee; border: 1px solid #444;
-         border-radius: 6px; padding: 8px 12px; font-size: 15px; }
-  .header { text-align: center; margin-top: 2px; }
-  .title { font-size: 22px; font-weight: 700; letter-spacing: 2px; }
-  .status { font-size: 13px; color: #aaa; margin-top: 2px; }
-  .status.warn { color: #ff6b6b; }
+  .scene { width: 100%; max-width: 560px; box-sizing: border-box; border-radius: 18px; overflow: hidden;
+           background: linear-gradient(180deg, #5aa6de 0%, #cfeeff 50%, #7dbe5a 74%, #5ca043 88%, #3e7e2e 100%); }
+  .controls { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; padding: 14px 10px 4px; align-items: center; }
+  .controls select, .controls button { background: #818384; color: #fff; border: none;
+         border-radius: 10px; padding: 10px 14px; font-size: 14px; font-weight: 600; }
+  .header { text-align: center; margin-top: 6px; }
+  .title { font-size: 24px; font-weight: 700; letter-spacing: 2px; color: #fff; text-shadow: 0 1px 4px rgba(0,0,0,.55); }
+  .status { font-size: 13px; color: #fff; margin-top: 3px; text-shadow: 0 1px 3px rgba(0,0,0,.5); }
+  .status.warn { color: #ff5a5a; }
   .board { display: flex; flex-direction: column; gap: 5px; margin: 14px 0 6px; }
-  .row { display: flex; gap: 5px; justify-content: center; }
-  .tile { width: 52px; height: 52px; border: 2px solid #3a3a3c; display: flex; align-items: center;
-          justify-content: center; font-size: 26px; font-weight: 700; text-transform: uppercase; }
+  .row { display: flex; gap: 5px; justify-content: center; align-items: center; position: relative; }
+  .tile { width: 52px; height: 52px; border: 2px solid #3a3a3c; border-radius: 8px; display: flex;
+          align-items: center; justify-content: center; font-size: 26px; font-weight: 700;
+          text-transform: uppercase; background: rgba(0,0,0,.4); }
+  .tile.filled { border-color: #565758; } /* typed but not yet submitted — Skin.tileBorderFilled */
   .tile.correct { background: #538d4e; border-color: #538d4e; }
   .tile.present { background: #b59f3b; border-color: #b59f3b; }
   .tile.absent  { background: #3a3a3c; border-color: #3a3a3c; }
-  .message { min-height: 22px; margin: 6px 0; color: #ddd; }
-  .keyboard { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+  .message { min-height: 22px; margin: 6px 0; color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,.5); }
+  .keyboard { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; padding: 0 6px; }
   .krow { display: flex; gap: 5px; justify-content: center; }
-  .key { background: #818384; border: none; border-radius: 4px; color: #eee; font-weight: 700;
+  .key { background: #818384; border: none; border-radius: 8px; color: #eee; font-weight: 700;
          min-width: 30px; padding: 14px 8px; font-size: 14px; cursor: pointer; }
   .key.wide { min-width: 52px; }
-  .row { position: relative; align-items: center; }
-  .hint { background: none; border: none; color: #9aa0a6; font-weight: 700; font-size: 17px;
-          cursor: pointer; padding: 0 0 0 6px; }
+  .hint { background: none; border: none; color: #eee; font-weight: 700; font-size: 17px;
+          cursor: pointer; padding: 0 0 0 6px; text-shadow: 0 1px 3px rgba(0,0,0,.5); }
   .duelicon { font-size: 18px; padding-right: 4px; }
   .duelcode { color: #eee; font-weight: 700; font-size: 40px; letter-spacing: 4px; text-align: center;
               padding: 10px 0 4px; cursor: pointer; }
   .key.correct { background: #538d4e; }
   .key.present { background: #b59f3b; }
   .key.absent  { background: #3a3a3c; }
-  .actionrow { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 2px 0 10px; }
-  .action { background: #2a2a2c; color: #eee; border: 1px solid #444; border-radius: 6px;
-            padding: 8px 12px; font-size: 14px; cursor: pointer; }
+  .actionrow { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 2px 0 14px; }
+  .action { background: #818384; color: #fff; border: none; border-radius: 10px;
+            padding: 8px 14px; font-size: 14px; cursor: pointer; }
   .overlay { position: fixed; inset: 0; background: rgba(0,0,0,.65); display: flex;
              align-items: center; justify-content: center; z-index: 10; }
-  .modal { background: #1e1e1f; border: 1px solid #3a3a3c; border-radius: 10px; padding: 14px;
+  .modal { background: #2a2a2c; border: 1px solid #3a3a3c; border-radius: 10px; padding: 14px;
            width: min(92vw, 420px); max-height: 82vh; overflow-y: auto; }
   .modalhead { display: flex; justify-content: space-between; align-items: center; gap: 8px;
                margin-bottom: 8px; }
@@ -106,7 +116,7 @@
   .boardname { flex: 1; font-weight: 700; letter-spacing: 1px; }
   .boardscore { color: #ccc; }
   .flag { background: none; border: none; color: #888; cursor: pointer; font-size: 14px; }
-  .policylink { color: #7fd4a0; font-size: 13px; display: inline-block; margin-top: 6px; }
+  .policylink { color: #8ab4f8; font-size: 13px; display: inline-block; margin-top: 6px; } /* Skin.SCENIC.link */
   /* The landing-page half: the family overview and the Android/Play status live under the game. */
   .landing { width: 100%; max-width: 560px; padding: 0 16px 24px; }
   .card { background: #1c1c1d; border: 1px solid #2c2c2e; border-radius: 12px;
@@ -127,16 +137,18 @@
 </style>
 </head>
 <body>
-<div class="controls">
-  <select id="lang" aria-label="Language"></select>
-  <select id="len" aria-label="Word length"></select>
-  <button id="daily">Daily</button>
-  <button id="free">Free play</button>
-  <button id="timedbtn">⏱ Timed</button>
-  <button id="duelbtn">⚔️ Duel</button>
-  <button id="install" hidden>📲 Install</button>
+<div class="scene">
+  <div class="controls">
+    <select id="lang" aria-label="Language"></select>
+    <select id="len" aria-label="Word length"></select>
+    <button id="daily">Daily</button>
+    <button id="free">Free play</button>
+    <button id="timedbtn">⏱ Timed</button>
+    <button id="duelbtn">⚔️ Duel</button>
+    <button id="install" hidden>📲 Install</button>
+  </div>
+  <div id="app"></div>
 </div>
-<div id="app"></div>
 
 <div class="landing">
   <div class="card">
