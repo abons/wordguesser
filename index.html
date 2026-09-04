@@ -43,18 +43,20 @@
 </script>
 <style>
   /*
-   * Chrome/typography still a skeleton, but the game surface now borrows Android's actual tokens:
-   * the MEADOW scene's sky→ground gradient (SceneBackground.kt's Palette — skyTop/skyBottom/far/
-   * mid/near, HORIZON=0.74) stands in for the eight-scene rotation (out of scope here — those are
-   * drawn shapes, not a CSS-portable asset), and the tile/key colours already matched exactly
-   * (Skin.SCENIC's correct/present/absent/tileBorderEmpty). Rounded corners and the grey chrome-
-   * button fill (Skin.SCENIC.keyDefault, #818384) are the app's, not a browser default.
+   * The game surface borrows Android's actual tokens: the tile/key colours match exactly
+   * (Skin.SCENIC's correct/present/absent/tileBorderEmpty/tileEmpty), and the rounded corners and
+   * grey chrome-button fill (Skin.SCENIC.keyDefault, #818384) are the app's, not a browser default.
+   * The backdrop is `src/core/scene.ts` painting into `#scenecanvas` — a real port of the eight
+   * drawn scenes, replacing the flat MEADOW gradient that used to stand in for them.
    */
   :root { color-scheme: dark; }
   body { margin: 0; background: #121213; color: #eee; font: 16px system-ui, sans-serif;
          display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
   .scene { width: 100%; max-width: 560px; box-sizing: border-box; border-radius: 18px; overflow: hidden;
-           background: linear-gradient(180deg, #5aa6de 0%, #cfeeff 50%, #7dbe5a 74%, #5ca043 88%, #3e7e2e 100%); }
+           position: relative; background: #0B1030; }
+  /* Behind everything in .scene; the canvas is painted by scene.ts and is purely decorative. */
+  #scenecanvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; z-index: 0; }
+  .scene > *:not(#scenecanvas) { position: relative; z-index: 1; }
   .controls { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; padding: 14px 10px 4px; align-items: center; }
   .controls select, .controls button { background: #818384; color: #fff; border: none;
          border-radius: 10px; padding: 10px 14px; font-size: 14px; font-weight: 600; }
@@ -66,7 +68,7 @@
   .row { display: flex; gap: 5px; justify-content: center; align-items: center; position: relative; }
   .tile { width: 52px; height: 52px; border: 2px solid #3a3a3c; border-radius: 8px; display: flex;
           align-items: center; justify-content: center; font-size: 26px; font-weight: 700;
-          text-transform: uppercase; background: rgba(0,0,0,.4); }
+          text-transform: uppercase; background: rgba(0,0,0,.65); } /* Skin.tileEmpty 0xA6000000 */
   .tile.filled { border-color: #565758; } /* typed but not yet submitted — Skin.tileBorderFilled */
   .tile.correct { background: #538d4e; border-color: #538d4e; }
   .tile.present { background: #b59f3b; border-color: #b59f3b; }
@@ -138,6 +140,7 @@
 </head>
 <body>
 <div class="scene">
+  <canvas id="scenecanvas" aria-hidden="true"></canvas>
   <div class="controls">
     <select id="lang" aria-label="Language"></select>
     <select id="len" aria-label="Word length"></select>
