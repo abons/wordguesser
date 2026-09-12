@@ -68,9 +68,8 @@ If you enjoy it, you can [☕ support the developer on Ko-fi](https://ko-fi.com/
 
 ---
 
-*This repository hosts the public download page, the APKs it links to, and the
-word lists the app downloads at runtime. The app is signed by CN=hrbons. The lists are ©
-their respective authors and are mirrored here as filtered derivatives, each under its own
-upstream licence — see [`wordlists/SOURCES.md`](wordlists/SOURCES.md) for the full
-per-language attribution and [`wordlists/licenses/`](wordlists/licenses/) for the licence
-texts.*
+*This repository hosts the public page and the word lists the app downloads at runtime.
+The app is signed by CN=hrbons. The lists are © their respective authors and are mirrored
+here as filtered derivatives, each under its own upstream licence — see
+[`wordlists/SOURCES.md`](wordlists/SOURCES.md) for the full per-language attribution and
+[`wordlists/licenses/`](wordlists/licenses/) for the licence texts.*
