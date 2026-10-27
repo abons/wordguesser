@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Word Cross — privacy policy</title>
+<meta name="description" content="What the Word Cross Android app stores, what it sends, and to whom. No accounts, no ads, no trackers, no analytics. A name goes on the daily leaderboard only if you send it.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://abons.github.io/wordguesser/policy/privacy-wordpuzzle.html">
+<meta name="theme-color" content="#121213">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23121213'/%3E%3Ctext x='50' y='73' font-size='62' font-family='sans-serif' font-weight='bold' fill='%2316a34a' text-anchor='middle'%3EX%3C/text%3E%3C/svg%3E">
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    line-height: 1.6; color: #111; background: #fafafa;
+    display: flex; justify-content: center; padding: 24px;
+  }
+  main { width: 100%; max-width: 640px; }
+  h1 { font-size: 1.7rem; margin: .2em 0 .1em; }
+  .tag { color: #666; margin: 0 0 1.4em; }
+  .card { background: #fff; border: 1px solid #e3e3e3; border-radius: 14px; padding: 20px 22px; margin: 16px 0; }
+  h2 { font-size: 1.05rem; margin: 0 0 .6em; }
+  ul { padding-left: 1.2em; }
+  li { margin: .3em 0; }
+  a { color: #16a34a; }
+  code { background: #f0f0f0; border-radius: 4px; padding: 1px 5px; font-size: .92em; }
+  footer { color: #666; font-size: .9rem; margin: 24px 0 8px; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e9e9e9; background: #121212; }
+    .card { background: #1c1c1c; border-color: #2e2e2e; }
+    .tag, footer { color: #9b9b9b; }
+    a { color: #4ade80; }
+    code { background: #262626; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Privacy policy</h1>
+<p class="tag">Word Cross / Woordpuzzel for Android (<code>com.hrbons.wordpuzzle</code>)</p>
+
+<div class="card">
+  <h2>The short version</h2>
+  <p>
+    Word Cross has <strong>no accounts, no ads, no trackers and no analytics</strong>. Nothing about you
+    is profiled or sold. The puzzles are built and played on your own device. The app uses the network
+    to download its word lists, to show the daily leaderboard, and — only when you choose to — to put a
+    name of your own choosing on that leaderboard or to report a name on it.
+  </p>
+</div>
+
+<div class="card">
+  <h2>What stays on your device</h2>
+  <p>
+    Your statistics and day streak, the puzzles you have in progress, your coin balance, the name you
+    last used on the leaderboard and your settings — puzzle language, puzzle size and colour theme —
+    live in the app's own files on the device. So do the downloaded word lists. None of it leaves the
+    device on its own, and uninstalling the app deletes all of it.
+  </p>
+  <p>
+    The app allows Android's own backup, so a device backup you have enabled with Google can include
+    your statistics, streak and puzzles in progress. That backup is governed by Google's terms, not by
+    this app, and you can switch it off in Android's settings.
+    <strong>Your coin balance is deliberately kept out of that backup</strong>: it sits in its own file
+    that the cloud backup excludes.
+  </p>
+</div>
+
+<div class="card">
+  <h2>What leaves your device</h2>
+  <ul>
+    <li><strong>Word lists.</strong> On first use, and when you switch the puzzle language, the app
+      downloads its Dutch or English word list and definitions from
+      <code>abons.github.io</code> (GitHub Pages). Nothing about you is sent with that request.</li>
+    <li><strong>Reading the daily leaderboard.</strong> When you open it, the app asks for that day's
+      list. Nothing about you is sent with that request either.</li>
+    <li><strong>Joining the daily leaderboard — only if you tap Submit.</strong> The app sends the name
+      you type (at most ten letters and digits, reduced to A–Z and 0–9) together with three numbers for
+      that day's puzzle: your time in seconds, your number of mistakes and your number of hints. That
+      entry is <strong>public</strong>: everyone who opens the leaderboard for that day and language
+      sees the name and the time. Pick a name that does not identify you if you would rather not be
+      recognised.</li>
+    <li><strong>Reporting a name — only if you tap Report.</strong> The app sends the reported name,
+      the day and language of the board it is on, and one of three categories. Your own name, your
+      device and any message are not sent; a report carries nothing that says who made it.</li>
+    <li><strong>An update check — in the Google Play version only.</strong> At start the app reads a
+      file of a few dozen bytes from <code>abons.github.io</code> that says whether this version may
+      still be played. Nothing about you or your game is sent with it.</li>
+  </ul>
+  <p>
+    The leaderboard and the reports live in a Google Firebase Realtime Database hosted in the EU
+    (europe-west1). Everything goes over HTTPS and the app refuses plain HTTP outright. Like any web
+    service, GitHub and Firebase see the IP address a request comes from; the app itself never stores
+    or sends it, and it sends no device identifier and no identifier of its own.
+  </p>
+</div>
+
+<div class="card">
+  <h2>When the app hands you to another app</h2>
+  <p>
+    <strong>Sharing a result</strong> opens Android's share sheet with a short text — the puzzle's
+    numbers and the shape of the grid, never its letters — and a link to the web version. Where it goes
+    is up to you and the app you pick. The <strong>voluntary Ko-fi support link</strong> and the
+    content-policy link open in a browser of your choice, and from that moment that site's privacy
+    policy applies, not this one. The app sends nothing along with either.
+  </p>
+</div>
+
+<div class="card">
+  <h2>Children</h2>
+  <p>
+    The game asks for no personal data. The only thing a player can publish is a leaderboard name, it
+    is never required to play, and names are filtered against a list of offensive words and can be
+    reported from inside the app — see the <a href="content-policy-wordpuzzle.html">content policy</a>.
+    There is no chat, no messaging and no profile.
+  </p>
+</div>
+
+<div class="card">
+  <h2>Keeping and deleting your data</h2>
+  <p>
+    Everything on your device goes when you uninstall the app. A leaderboard entry cannot be changed or
+    withdrawn from inside the app — the board is append-only, so that nobody can overwrite someone
+    else's score — and it is kept until it is removed by hand. To have an entry removed, send the name,
+    the day and the language of the board to the address below and it will be deleted; a report you
+    sent is removed the same way once it has been handled.
+  </p>
+</div>
+
+<div class="card">
+  <h2>Changes and contact</h2>
+  <p>
+    If this policy changes, the date below changes with it. Questions, or a request to remove
+    something: <a href="mailto:hr.bons@gmail.com">hr.bons@gmail.com</a>
+  </p>
+</div>
+
+<footer>
+  Last updated: 27 October 2026 · <a href="https://abons.github.io/wordguesser/">Back to the games</a>
+</footer>
+
+</main>
+</body>
+</html>

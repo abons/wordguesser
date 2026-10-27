@@ -2,3 +2,5 @@ https://abons.github.io/wordguesser/
 https://abons.github.io/wordguesser/policy/content-policy.html
 https://abons.github.io/wordguesser/policy/privacy.html
 https://abons.github.io/wordguesser/policy/privacy-fastlane.html
+https://abons.github.io/wordguesser/policy/privacy-wordpuzzle.html
+https://abons.github.io/wordguesser/policy/content-policy-wordpuzzle.html
