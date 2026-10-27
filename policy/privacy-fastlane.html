@@ -47,8 +47,9 @@
   <p>
     Fast Lane has <strong>no accounts, no ads, no trackers and no analytics</strong>. Nothing about you
     is collected, profiled or sold. The game is played entirely on your own device, and it uses the
-    network for exactly one thing: an online duel against another player, which only happens if you
-    start one. It never asks for your name, and it has nowhere to put one.
+    network for two things: an online duel against another player, which only happens if you start
+    one, and — in the version from Google Play — one small check at start-up whether this version
+    still needs an update. It never asks for your name, and it has nowhere to put one.
   </p>
 </div>
 
@@ -76,7 +77,8 @@
 <div class="card">
   <h2>What leaves your device</h2>
   <p>
-    Only an online duel, and only after you start or join one. Two phones share a <strong>room</strong>
+    Game data leaves only in an online duel, and only after you start or join one (the update check
+    below carries none). Two phones share a <strong>room</strong>
     named by a four-character code that one player reads out to the other. Through that room the app
     exchanges:
   </p>
@@ -103,6 +105,16 @@
     room whose host never leaves — a force-close, a flat battery — stays behind until it is removed by
     hand, still holding nothing that names anyone.
   </p>
+  <p>
+    <strong>The update check.</strong> Each time the Google Play version starts, it downloads one tiny
+    file — <code>https://abons.github.io/wordguesser/min-version-fastlane.json</code>, a few dozen
+    bytes saying which version is the oldest that may still be played. The request carries nothing
+    about you or your game: no identifier, no save, not even the app's own version number — only what
+    every HTTPS request carries, your IP address and the header <code>User-Agent: FastLane</code>. The
+    file is served by GitHub Pages, so GitHub can see that IP address in its logs, under GitHub's own
+    privacy terms. The app keeps only the answer, on the device. The version you install outside
+    Google Play makes no such request.
+  </p>
 </div>
 
 <div class="card">
@@ -127,7 +139,7 @@
   <h2>Deleting your data</h2>
   <p>
     Everything the game knows about you is on your phone, so uninstalling it removes all of it. The one
-    thing that ever leaves is a duel room, which the player who opened it hands back on leaving, and
+    thing that ever leaves and is kept is a duel room (the update check sends nothing to keep), which the player who opened it hands back on leaving, and
     which contains no name in any case. If a room was left behind and you want it gone, send its
     four-character code to the address below and it will be removed by hand.
   </p>
@@ -142,7 +154,7 @@
 </div>
 
 <footer>
-  Last updated: 16 August 2026 · <a href="https://abons.github.io/wordguesser/">Back to the games</a>
+  Last updated: 27 October 2026 · <a href="https://abons.github.io/wordguesser/">Back to the games</a>
 </footer>
 
 </main>
