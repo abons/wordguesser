@@ -26,7 +26,8 @@ new name. `build-lists.py` refuses to overwrite a file that already exists.
 
 The Dutch files predate this rule and keep their unversioned names (`nl.txt`,
 `nl-accept.txt`, `nl-defs.json`) because three shipped apps hard-code them — treat those
-as version 1. The next Dutch pool change becomes `nl-v2.txt` beside them.
+as version 1. The first Dutch pool change is `nl-v2.txt` beside them (2026-10-28, 112 words
+removed, see [NL-README.md](NL-README.md)); `nl.txt` stays up for the builds that ask for it.
 
 ## Modifications made to every list
 
